@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#">login</a>
+              <a class="nav-link active" href="login.php">login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">cadastro</a>
+              <a class="nav-link" href="cadastro.php">cadastro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">sobre</a>
