@@ -17,7 +17,7 @@
     <!-- LOGIN -->
     <div class="container containerAcesso">
         <div class="row boxLogin">
-            <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
+            <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4 columnT">
                 <h2 class="mb-3"> Crie um novo cadastro </h2>
                 <p class="mb-4"> Caso for um aluno do ifc-cas, cadastre-se no site para ter acesso as funcionalidades </p>
                 <button type="button" class="btn btn-primary ">Cadastre-se</button>
@@ -35,7 +35,7 @@
                         <input type="password" placeholder="senha" class="form-control" id="#">
                     </div>
                 </form>
-                <button type="submit" class="btn btn-primary">cadastrar</button>
+                <button type="submit" class="btn btn-primary">Entrar</button>
             </div>
         </div>
         <!-- //LOGIN -->

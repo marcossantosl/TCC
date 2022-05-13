@@ -94,17 +94,3 @@
 .containerFooter {
   background-color: var(--primary);
 }
-
-/* cadastro e login*/
-
-.containerAcesso {
-  justify-content: center;
-  align-self: center;
-  height: 100vh;
-  display: flex;
-}
-
-row {
-  background-color: var(--primary);
-  border-radius: 15px;
-}
