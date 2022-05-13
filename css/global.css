@@ -1,7 +1,10 @@
 body,
 html {
   font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {

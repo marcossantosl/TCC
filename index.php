@@ -20,8 +20,7 @@
         <a class="navbar-brand" href="#">
           <img src="assets/logo.svg" class="img-fluid" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,8 +44,8 @@
   </div>
   <!--HEADER-->
 
-   <!--SLIDER-->
-   <div id="slider" class="block">
+  <!--SLIDER-->
+  <div id="slider" class="block">
     <div class="container pt-5">
       <div class="row firstRowSlide">
         <div class="col-lg-4 col-md-6 align-self-center mb-md-0 mb-4">
@@ -74,35 +73,33 @@
   <!--//SLIDER-->
 
   <!--FOOTER-->
-    <footer id="contato">
-      <div class="container containerFooter">
-        <div class="logo py-4">
-          <div class="row">
-            <div class="col-md-9 align-self-center text-md-left text-center">
-              <img src="assets/logo.svg" class="img-fluid" />
-            </div>
-            <div class="col-md-3 align-self-center text-right">
-              <ul>
-                <li>
-                  <a href="#"><img src="assets/discord.svg" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="assets/twitter.svg" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="assets/instagram.svg" /></a>
-                </li>
-              </ul>
-            </div>
+  <footer id="contato">
+    <div class="container containerFooter">
+      <div class="logo py-4">
+        <div class="row">
+          <div class="col-md-9 align-self-center text-md-left text-center">
+            <img src="assets/logo.svg" class="img-fluid" />
+          </div>
+          <div class="col-md-3 align-self-center text-right">
+            <ul>
+              <li>
+                <a href="#"><img src="assets/discord.svg" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="assets/twitter.svg" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="assets/instagram.svg" /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-    <!--//FOOTER-->
+    </div>
+  </footer>
+  <!--//FOOTER-->
   <!--JS-->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
