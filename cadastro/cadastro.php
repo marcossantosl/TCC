@@ -27,29 +27,31 @@
 
             <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
                 <h2 class="mb-4 justify-content-center"> Crie sua conta </h2>
-                <form>
+
+                <form method="POST" action="recebecadastro.php">
                     <div class="mb-4">
                         <label class="form-label"></label>
-                        <input type="text" class="form-control" placeholder="nome completo" id="#">
+                        <input type="text" class="form-control" placeholder="nome completo" name="nome">
                     </div>
                     <div class="mb-4">
                         <label class="form-label"></label>
-                        <input type="text" class="form-control" placeholder="usuário" id="#">
+                        <input type="text" class="form-control" placeholder="usuário" name="user">
                     </div>
                     <div class="mb-4">
                         <label class="form-label"></label>
-                        <input type="email" placeholder="email" class="form-control" id="#">
+                        <input type="email" placeholder="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"></label>
-                        <input type="password" placeholder="senha" class="form-control" id="#">
+                        <input type="password" placeholder="senha" class="form-control" name="password">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"></label>
-                        <input type="password" placeholder="repita a senha" class="form-control" id="#">
+                        <input type="password" placeholder="repita a senha" class="form-control" name="rpassword">
                     </div>
+                    <input type="submit" value="cadastrar" class="btn btn-primary">
                 </form>
-                <button type="submit" class="btn btn-primary">cadastrar</button>
+
             </div>
         </div>
         <!-- //CADASTRO -->

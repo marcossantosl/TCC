@@ -1,5 +1,6 @@
 /* cadastro e login*/
 
+
 .containerAcesso {
     justify-content: center;
     align-self: center;
@@ -9,4 +10,8 @@
 
 row {
     border-radius: 15px;
+}
+
+.boxLogin {
+    background-color: var(--primary);
 }
