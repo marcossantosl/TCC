@@ -28,6 +28,14 @@
             <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
                 <h2 class="mb-4 justify-content-center"> Crie sua conta </h2>
 
+                <?php
+                session_start();
+
+                if ($_SESSION['aviso!']) {
+                    echo $_SESSION['aviso!'];
+                    $_SESSION['aviso!'] = '';
+                }
+                ?>
                 <form method="POST" action="recebecadastro.php">
                     <div class="mb-4">
                         <label class="form-label"></label>
