@@ -20,17 +20,16 @@
         <a class="navbar-brand" href="#">
           <img src="assets/logo.svg" class="img-fluid" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="login.php">login</a>
+              <a class="nav-link active" href="./login/login.php">login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../cadastro/cadastro.php">cadastro</a>
+              <a class="nav-link" href="./cadastro/cadastro.php">cadastro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">sobre</a>
@@ -106,10 +105,9 @@
     </div>
   </footer>
   <!--//FOOTER-->
+
   <!--JS-->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>

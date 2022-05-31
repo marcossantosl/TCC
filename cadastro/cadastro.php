@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+require("../config.php")
+?>
+
 <html lang="pt-br">
 
 <head>
@@ -7,7 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <title>Marketing Website</title>
 </head>
@@ -22,7 +27,7 @@
             <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
                 <h2 class="mb-3"> Bem vindo de volta </h2>
                 <p class="mb-4"> Conecte sua conta agora</p>
-                <button type="button" class="btn btn-primary href=" cadastro.php">entrar</button>
+                <button type="button" class="btn btn-primary botao1" href="../login/login.php">entrar</button>
             </div>
 
             <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
@@ -31,11 +36,22 @@
                 <?php
                 session_start();
 
-                if ($_SESSION['aviso!']) {
+                if (isset($_SESSION['aviso!'])) {
                     echo $_SESSION['aviso!'];
                     $_SESSION['aviso!'] = '';
                 }
+
+                if (isset($_SESSION['avisoSenha!'])) {
+                    echo $_SESSION['avisoSenha!'];
+                    $_SESSION['avisoSenha!'] = '';
+                }
+
+                if (isset($_SESSION['avisoUser!'])) {
+                    echo $_SESSION['avisoUser!'];
+                    $_SESSION['avisoUser!'] = '';
+                }
                 ?>
+
                 <form method="POST" action="recebecadastro.php">
                     <div class="mb-4">
                         <label class="form-label"></label>
