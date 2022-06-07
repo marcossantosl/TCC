@@ -1,7 +1,10 @@
 #header {
   width: 100%;
   background-color: transparent;
-  transition: background ease-out 0.2s;
+}
+
+#header .container {
+  border-bottom: solid 4px black;
 }
 
 #header.active {
@@ -11,9 +14,6 @@
   z-index: 9999;
 }
 
-.containerHeader {
-  background-color: var(--primary);
-}
 
 #header .navbar-collapse {
   width: auto;
@@ -26,13 +26,15 @@
   padding-left: 0;
   padding-right: 0;
   color: var(--tertiary);
-  border-bottom: solid 4px transparent;
+  border-bottom: solid 3px transparent;
 }
 
 #header .nav-link:hover {
-  border-bottom: solid 4px var(--tertiary-light);
+  border-bottom: solid 3px var(--tertiary-light);
   color: var(--tertiary-light);
 }
+
+
 
 #slider {
   margin-bottom: 40px;
@@ -91,6 +93,6 @@
   background-color: rgb(20, 177, 33);
 }
 
-.containerFooter {
-  background-color: var(--primary);
+#contato .container{
+  border-top: solid 4px black;
 }

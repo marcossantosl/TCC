@@ -5,9 +5,10 @@ html {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  background-image: url(../landingpage/assets/background.gif);
 }
 
 body {
   /* background: url(../assets/footer-bg.png) no-repeat center bottom; */
-  padding-bottom: 400px;
+
 }

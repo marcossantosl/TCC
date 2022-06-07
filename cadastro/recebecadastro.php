@@ -26,10 +26,11 @@ if ($senha == $rsenha) {
 
 //GRAVAR DB
 
-if ($nome and $user and $email and $senha and $rsenha) {
+if ($user && $email) {
 
-    $sql = $pdo->prepare("SELECT * FROM usuario.usuario WHERE user = :user");
+    $sql = $pdo->prepare("SELECT * FROM usuario.usuario WHERE user = :user and email = :email");
     $sql->bindValue(':user', $user);
+    $sql->bindValue(':email', $email);
     $sql->execute();
 
     if ($sql->rowCount() === 0) {
@@ -40,10 +41,10 @@ if ($nome and $user and $email and $senha and $rsenha) {
         $sql->bindValue(':senha', $senha);
         $sql->execute();
 
-        header('Location: paginainicial.php');
+        header('Location: ../landing page/index.php');
         exit;
     } else {
-        $_SESSION['avisoUser!'] = 'Usuário já cadastrado<br><br>';
+        $_SESSION['avisoUser!'] = 'Email ou/e usuário já cadastrados<br><br>';
         header("Location: cadastro.php");
         exit;
     }

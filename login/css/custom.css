@@ -1,0 +1,8 @@
+/* cadastro e login*/
+
+.containerAcesso {
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  display: flex;
+}
