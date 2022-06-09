@@ -20,44 +20,46 @@ require("../config.php")
 
     <!-- LOGIN -->
     <div class="container containerAcesso">
-        <div class="row boxLogin">
-            <div class="col-lg-6 col-md-6 align-self-center">
+        <div class="row ">
+            <div class="left-login">
                 <h2> Crie um novo cadastro </h2>
-                <p> Se caso você for um aluno do ifc-cas, cadastre-se no site para ter acesso as funcionalidades
-                </p>
-                <button type="button" href="..cadastro/cadastro.php">Cadastre-se</button>
+                <p>Cadastre-se no site para ter acesso as funcionalidades</p>
+                <button class="button" type="button" href="..cadastro/cadastro.php">Cadastre-se</button>
             </div>
 
-            <div class="col-lg-6 col-md-6 align-self-center">
-                <h2 class="justify-content-center">Entre</h2>
+            <div class="right-login">
+                <div class="card-login">
+                    <h2>Entre</h2>
 
-                <?php
-                session_start();
-
-                if (isset($_SESSION['aviso!'])) {
-                    echo $_SESSION['aviso!'];
-                    $_SESSION['aviso!'] = '';
-                }
-
-                if (isset($_SESSION['avisoLogin!'])) {
-                    echo $_SESSION['avisoLogin!'];
-                    $_SESSION['avisoLogin!'] = '';
-                }
-                ?>
-
-                <form method="POST" action="recebeLogin.php">
-                    <div>
-                        <label class="form-label"><input type="text"  placeholder="usuário" name="user"></label>
-                        
-                    </div>
-                    <div>
-                        <label class="form-label"> <input type="password" placeholder="senha" name="senha"></label>
-                       
-                    </div>
-                    <div>
-                        <label class="form-label">  <input type="submit" value="entrar"></label>
-                    </div>
-                </form>
+                    <?php
+                    session_start();
+    
+                    if (isset($_SESSION['aviso!'])) {
+                        echo $_SESSION['aviso!'];
+                        $_SESSION['aviso!'] = '';
+                    }
+    
+                    if (isset($_SESSION['avisoLogin!'])) {
+                        echo $_SESSION['avisoLogin!'];
+                        $_SESSION['avisoLogin!'] = '';
+                    }
+                    ?>
+                    <form method="POST" action="recebeLogin.php">
+                   
+                        <div class="text-field">
+                            <label class="form-label">Usuário</label>
+                            <input type="text"  placeholder="usuário" name="user">
+                        </div>
+                        <div>
+                            <label class="form-label">Senha</label>
+                            <input type="password" placeholder="senha" name="senha">
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="entrar">
+                        </div>
+                    </form>
+                </div>
+               
             </div>
         </div>
         <!-- //LOGIN -->
