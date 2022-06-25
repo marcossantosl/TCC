@@ -1,0 +1,40 @@
+#contato ul {
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contato ul li {
+    display: flex;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+#contato ul li:first-child {
+    margin-left: 0px;
+}
+
+#contato ul li img {
+    max-height: 25px;
+}
+
+#contato ul li a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all ease-out 0.2s;
+}
+
+#contato ul li a:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgb(20, 177, 33);
+}
+
+#contato .container {
+    border-top: solid 4px black;
+}

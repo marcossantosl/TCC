@@ -1,0 +1,12 @@
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(../images/background.gif);
+}
+
+body {
+  /* background: url(../assets/footer-bg.png) no-repeat center bottom; */
+}

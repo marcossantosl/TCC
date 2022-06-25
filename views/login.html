@@ -1,0 +1,64 @@
+<?php
+require("../config.php")
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <title>Marketing Website</title>
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <div class="container containerAcesso">
+        <div class="left-login">
+            <h2> Crie um novo cadastro </h2>
+            <p>Cadastre-se no site para ter acesso as funcionalidades</p>
+            <button class="button" type="button" href="..cadastro/cadastro.php">Cadastre-se</button>
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h2>Entre</h2>
+
+                <?php
+                session_start();
+
+                if (isset($_SESSION['aviso!'])) {
+                    echo $_SESSION['aviso!'];
+                    $_SESSION['aviso!'] = '';
+                }
+
+                if (isset($_SESSION['avisoLogin!'])) {
+                    echo $_SESSION['avisoLogin!'];
+                    $_SESSION['avisoLogin!'] = '';
+                }
+                ?>
+                <form method="POST" action="recebeLogin.php">
+                    <div>
+                        <input type="text" placeholder="usuário" name="user">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="senha" name="senha">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="entrar">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- //LOGIN -->
+    </div>
+
+</body>
+
+</html>
