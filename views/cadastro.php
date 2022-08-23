@@ -9,12 +9,13 @@ require("../php/config.php")
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../assets/css/main.css" />
 
-    <title>Marketing Website</title>
+    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
+
+    <title>Cadastro</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@ require("../php/config.php")
 
     <!-- CADASTRO -->
     <div class="container containerAcesso">
-        <div class="box-sigin">
+        <div>
             <div>
                 <h2 class=""> Bem vindo de volta </h2>
                 <p class=""> Conecte sua conta agora</p>
@@ -35,7 +36,6 @@ require("../php/config.php")
 
         <div>
             <h2> Crie sua conta </h2>
-
             <?php
                 session_start();
 
@@ -55,29 +55,35 @@ require("../php/config.php")
                 }
                 ?>
 
-            <div class="formulario">
-                <form method="POST" action="../php/recebecadastro.php">
-                    <div>
-                        <input type="text" placeholder="nome completo" name="nome">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="usuário" name="user">
-                    </div>
-                    <div>
-                        <input type="email" placeholder="email" name="email">
-                    </div>
-                    <div>
-                        <input type="password" placeholder="senha" name="password">
-                    </div>
-                    <div>
-                        <input type="password" placeholder="repita a senha" name="rpassword">
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="cadastrar">
-                    </div>
-                </form>
+            <form method="POST" action="../php/recebecadastro.php">
+            <div class="formCad">
+                <div class="input">
+                    <i class="fa fa-user-graduate"></i>
+                    <input type="text" placeholder="nome completo" name="nome">
+                </div>
+                <div class="input">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="usuário" name="user">
+                </div>
+                <div class="input">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="email" name="email">
+                </div>
+                <div class="input">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="senha" name="password">
+                </div>
+                <div class="input">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="repita a senha" name="rpassword">
+                </div>
+                </p>
+                <br>
+                <div class="button">
+                    <input class="buttons" type="submit" value="cadastrar">
+                </div>
             </div>
-
+            </form>
         </div>
 
     </div>
