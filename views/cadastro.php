@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-require("../config.php")
+require("../php/config.php")
 ?>
 
 <html lang="pt-br">
@@ -23,12 +23,12 @@ require("../config.php")
 
     <!-- CADASTRO -->
     <div class="container containerAcesso">
-        <div class="row">
+        <div class="box-sigin">
             <div>
                 <h2 class=""> Bem vindo de volta </h2>
                 <p class=""> Conecte sua conta agora</p>
                 <div class="button">
-                    <button type="button" href="login.html">entrar</button>
+                <input type="button" class="buttons" onclick="location.href='login.php';" value="Entrar" />
                 </div>
             </div>
         </div>
@@ -55,26 +55,29 @@ require("../config.php")
                 }
                 ?>
 
-            <form method="POST" action="recebecadastro.php">
-                <div>
-                    <input type="text" placeholder="nome completo" name="nome">
-                </div>
-                <div>
-                    <input type="text" placeholder="usuário" name="user">
-                </div>
-                <div>
-                    <input type="email" placeholder="email" name="email">
-                </div>
-                <div>
-                    <input type="password" placeholder="senha" name="password">
-                </div>
-                <div>
-                    <input type="password" placeholder="repita a senha" name="rpassword">
-                </div>
-                <div class="button">
-                    <input type="submit" value="cadastrar">
-                </div>
-            </form>
+            <div class="formulario">
+                <form method="POST" action="../php/recebecadastro.php">
+                    <div>
+                        <input type="text" placeholder="nome completo" name="nome">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="usuário" name="user">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="email" name="email">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="senha" name="password">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="repita a senha" name="rpassword">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="cadastrar">
+                    </div>
+                </form>
+            </div>
+
         </div>
 
     </div>

@@ -1,0 +1,30 @@
+/* HEADER ICONS */
+
+.nav-home-image {
+    height: 50px;
+    width: 50px;
+}
+
+
+.principal-area {
+    display: flex;
+    margin-top: 100px;
+    height: 100vh;
+    justify-content: center;
+}
+
+.principal-area .funcao {
+    margin-Right: 25px;
+}
+
+.principal-area .funcao-imagem {
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+}
+
+.principal-area p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}

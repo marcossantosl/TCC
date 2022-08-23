@@ -26,29 +26,41 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="../login/index.php">locais</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./horarios.html">horários</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./calendario.html">calendário</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">contatos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">normas</a>
-                            </li>
-                        </ul>
+                        <img src="../assets/images/user.svg" class="img-fluid nav-home-image">
+                        <img src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                     </div>
                 </nav>
             </div>
         </div>
     </header>
     <!--HEADER-->
+
+    <!-- FUNÇÕES -->
+    <div class="container">
+        <main class="principal-area">
+            <div class="funcao">
+                <p>Horários</p>
+            </div>
+            <div class="funcao">
+                <img src="../assets/images/icon.svg" class="img-fluid funcao-imagem">
+                <p>Horários</p>
+            </div>
+            <div class="funcao">
+                <img src="../assets/images/icon.svg" class="img-fluid funcao-imagem">
+                <p>Horários</p>
+            </div>
+            <div class="funcao">
+                <img src="../assets/images/icon.svg" class="img-fluid funcao-imagem">
+                <p>Horários</p>
+            </div>
+            <div class="funcao">
+                <img src="../assets/images/icon.svg" class="img-fluid funcao-imagem">
+                <p>Horários</p>
+            </div>
+        </main>
+    </div>
+    <!-- //FUNÇOES -->
+
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

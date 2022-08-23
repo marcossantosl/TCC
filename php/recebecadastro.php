@@ -1,5 +1,5 @@
 <?php
-require("../config.php");
+require("./config.php");
 session_start();
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
@@ -12,14 +12,14 @@ $rsenha = filter_input(INPUT_POST, 'rpassword');
 if ($nome and $user and $email) {
 } else {
     $_SESSION['aviso!'] = 'Verifique seus campos<br><br>';
-    header("Location: cadastro.php");
+    header("Location: ../views/cadastro.php");
     exit;
 };
 
 if ($senha == $rsenha) {
 } else {
     $_SESSION['avisoSenha!'] = 'Senhas não coincidem<br><br>';
-    header("Location: cadastro.php");
+    header("Location: ../views/cadastro.php");
     exit;
 };
 // FIM SESSÕES
@@ -41,16 +41,16 @@ if ($user && $email) {
         $sql->bindValue(':senha', $senha);
         $sql->execute();
 
-        header('Location: ../landing page/index.php');
+        header('Location: ../views/login.php');
         exit;
     } else {
         $_SESSION['avisoUser!'] = 'Email ou/e usuário já cadastrados<br><br>';
-        header("Location: cadastro.php");
+        header("Location: ../views/cadastro.php");
         exit;
     }
 } else {
     $_SESSION['aviso!'];
-    header("Location: cadastro.php");
+    header("Location: ../views/cadastro.php");
     exit;
 };
 

@@ -1,5 +1,5 @@
 <?php
-require("../config.php")
+require("../php/config.php")
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,9 @@ require("../config.php")
 
     <link rel="stylesheet" href="../assets/css/main.css" />
 
-    <title>Marketing Website</title>
+    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
+
+    <title>login</title>
 </head>
 
 <body>
@@ -23,11 +25,12 @@ require("../config.php")
         <div class="left-login">
             <h2> Crie um novo cadastro </h2>
             <p>Cadastre-se no site para ter acesso as funcionalidades</p>
-            <button class="button" type="button" href="..cadastro/cadastro.php">Cadastre-se</button>
+            <input type="button" class="buttons" onclick="location.href='cadastro.php';" value="Cadastre-se" />
+
         </div>
-        <div class="right-login">
+        <div id="right-login">
             <div class="card-login">
-                <h2>Entre</h2>
+                <h2 class="title">Entre</h2>
 
                 <?php
                 session_start();
@@ -42,15 +45,18 @@ require("../config.php")
                     $_SESSION['avisoLogin!'] = '';
                 }
                 ?>
-                <form method="POST" action="recebeLogin.php">
-                    <div>
-                        <input type="text" placeholder="usuário" name="user">
+                
+                <form method="POST" action="../php/recebeLogin.php">
+                    <div class="input">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" placeholder="usuário ou email" name="user">
                     </div>
-                    <div>
+                    <div class="input">
+                        <i class="fa fa-user-lock"></i>
                         <input type="password" placeholder="senha" name="senha">
                     </div>
                     <div class="button">
-                        <input type="submit" value="entrar">
+                        <input class="buttons" type="submit" value="entrar">
                     </div>
                 </form>
             </div>

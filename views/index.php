@@ -19,7 +19,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
           <a class="navbar-brand" href="#">
-            <img src="../assets/images/logo.svg" class="img-fluid" />
+            <img src="../assets/images/logo.svg" class="img-fluid" onclick="location.href='index.php';"/>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,10 +28,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="../login/index.php">login</a>
+                <a class="nav-link active" href="login.php">login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../cadastro/index.php">cadastro</a>
+                <a class="nav-link" href="cadastro.php">cadastro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">sobre</a>
