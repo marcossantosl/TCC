@@ -44,6 +44,12 @@ require("../php/config.php")
                     echo $_SESSION['avisoLogin!'];
                     $_SESSION['avisoLogin!'] = '';
                 }
+                
+                if (isset($_SESSION['senha!'])) {
+                    echo $_SESSION['senha!'];
+                    $_SESSION['senha!'] = '';
+                }
+            
                 ?>
                 
                 <form method="POST" action="../php/recebeLogin.php">
@@ -56,7 +62,7 @@ require("../php/config.php")
                         <input type="password" placeholder="senha" name="senha">
                     </div>
                     <div class="button">
-                        <input class="buttons" type="submit" value="entrar">
+                        <input class="buttons" type="submit" value="Entrar">
                     </div>
                 </form>
             </div>
