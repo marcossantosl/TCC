@@ -1,5 +1,5 @@
 <?php
 session_start();
 
-$_SESSION['LoginSucesso!'] = false;
+$_SESSION['id'] = false;
 header('location: ../views/login.php');

@@ -12,11 +12,11 @@ if ($id) {
 
         $info = $sql->fetch(PDO::FETCH_ASSOC);
     } else {
-        header('Location: home.php');
+        //header('Location: home.php');
         exit;
     }
 } else {
-    header('Location: home.php');
+    //header('Location: home.php');
     exit;
 }
 
@@ -56,6 +56,6 @@ if (!$id) { //se o id não estiver correto
     <!-- if(confirm('Deseja mesmo sair'))location.href='../php/logout.php'; -->
     <!-- })()" -->
     <button class="button" onclick="(() =>{
-        if(confirm('Deseja mesmo excluir seu própriousuário?'))location.href='../php/editaruser.php?id=<?= $info['id']; ?>';
+        if(confirm('Deseja mesmo excluir seu próprio usuário?'))location.href='../php/deleteuser.php?id=<?= $id; ?>';
         })()">Excluir</button>
 </form>
