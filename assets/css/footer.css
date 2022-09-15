@@ -32,7 +32,7 @@
 
 #contato ul li a:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    background-color: rgb(20, 177, 33);
+    background-color: rgb(255, 255, 255);
 }
 
 #contato .container {

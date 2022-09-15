@@ -2,13 +2,13 @@
 require("./config.php");
 session_start();
 
-$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_STRING);
+$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $senha = filter_input(INPUT_POST, 'senha');
 $email = filter_input(INPUT_POST, 'user');
 
 if (!$user || !$senha) {
-    $_SESSION['avisoLogin!'] = 'Você deve digitar sua senha e login';
+    $_SESSION['avisoLogin!'] =  "<b><font color='red'> Você deve digitar sua senha e login </font></b>";
     header('Location: ../views/login.php');
     exit;
 };
@@ -18,20 +18,24 @@ $sql->bindValue(':user', $user);
 $sql->bindValue(':email', $email);
 $sql->execute();
 
-$senhaCriptografada = $sql->fetch(PDO::FETCH_ASSOC)['senha'];
 
-if (!$sql->rowCount() == 1) {
+
+$userObj = $sql->fetch(PDO::FETCH_ASSOC);
+$senhaCriptografada = $userObj['senha'];
+if (!$sql->rowCount() > 1) {
     $_SESSION['aviso!'] = 'Verifique seus campos';
     header("Location: ../views/login.php");
     exit;
 }
 
+$idUser = $userObj['id'];
+
 if (password_verify($senha, $senhaCriptografada)) {
-    $_SESSION['LoginSucesso!'] = 'Login efetuado com sucesso';
+    $_SESSION['id'] = $idUser;
     header('Location: ../views/home.php');
     exit;
 } else {
-    $_SESSION['senha!'] = 'Senha incorreta';
+    $_SESSION['senha!'] = "<b><font color='red'> Senha incorreta </font></b>";
     header("Location: ../views/login.php");
     exit;
 }

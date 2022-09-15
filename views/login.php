@@ -35,23 +35,18 @@ require("../php/config.php")
                 <?php
                 session_start();
 
-                if (isset($_SESSION['aviso!'])) {
-                    echo $_SESSION['aviso!'];
-                    $_SESSION['aviso!'] = '';
-                }
-
                 if (isset($_SESSION['avisoLogin!'])) {
                     echo $_SESSION['avisoLogin!'];
                     $_SESSION['avisoLogin!'] = '';
                 }
-                
+
                 if (isset($_SESSION['senha!'])) {
                     echo $_SESSION['senha!'];
                     $_SESSION['senha!'] = '';
                 }
-            
+
                 ?>
-                
+
                 <form method="POST" action="../php/recebeLogin.php">
                     <div class="input">
                         <i class="fa-regular fa-user"></i>
@@ -63,6 +58,8 @@ require("../php/config.php")
                     </div>
                     <div class="button">
                         <input class="buttons" type="submit" value="Entrar">
+
+
                     </div>
                 </form>
             </div>

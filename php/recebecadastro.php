@@ -15,13 +15,17 @@ $rsenha = filter_input(INPUT_POST, 'rpassword');
 
 //CAMPOS VAZIOS
 if (!$nome and !$user and !$email) {
-    $_SESSION['aviso!'] = 'Verifique seus campos<br><br>';
+    $_SESSION['aviso!'] =  "<b><font color='red'> Verifique seus campos </font></b>";
     header("Location: ../views/cadastro.php");
     exit;
 };
 
 if ($senha != $rsenha) {
-    $_SESSION['avisoSenha!'] = 'Senhas não coincidem<br><br>';
+    $_SESSION['avisoSenha!'] = "<b><font color='red'> Senhas não coincidem </font></b>";
+    header("Location: ../views/cadastro.php");
+    exit;
+} elseif (strlen($senha) < 8) {
+    $_SESSION['avisoComprimentoSenha!'] = "<b><font color='red'> Sua senha deve conter no mínimo 8 caracteres </font></b>";
     header("Location: ../views/cadastro.php");
     exit;
 };
@@ -45,10 +49,11 @@ if ($user and $email) {
         $sql->bindValue(':senha', $senha_criptografada);
         $sql->execute();
 
+        $_SESSION['CadastroSucesso!'] =  "<b><font color='red'> Cadastro efetuado com sucesso </font></b>";
         header('Location: ../views/login.php');
         exit;
     } else {
-        $_SESSION['avisoUser!'] = 'Email ou/e usuário já cadastrados<br><br>';
+        $_SESSION['avisoUser!'] =  "<b><font color='red'> Email ou/e usuário já cadastrados </font></b>";
         header("Location: ../views/cadastro.php");
         exit;
     }
