@@ -10,7 +10,7 @@ $senha = filter_input(INPUT_POST, 'password');
 $rsenha = filter_input(INPUT_POST, 'rpassword');
 $senha_criptografada = password_hash($senha, PASSWORD_DEFAULT);
 
-
+//PEDIR AJUDA LOSEKANN SEXTA NISSO
 //se a senha não for vazia ele faz essa verificação tornando ela opcional
 if ($senha and $rsenha != "") { // se as senhas forem diferentes de ""
     if ($senha != $rsenha) { //verifica se as senhas sao iguais
@@ -18,12 +18,12 @@ if ($senha and $rsenha != "") { // se as senhas forem diferentes de ""
         header("location:  ../views/editar-user.php?id=" . $id); //volta pra página de editar
         exit;
     } elseif (strlen($senha) < 8) { //verifica se a senha tem no mínimo 8 dígitos
-        $_SESSION['avisoSenha!'] = "<b><font color='red'> Sua senha deve conter no mínimo 8 caracteres </font></b>";
+        $_SESSION['tamanhoSenha!'] = "<b><font color='red'> Sua senha deve conter no mínimo 8 caracteres </font></b>";
         header("location:  ../views/editar-user.php?id=" . $id);
         // header ("location: ../view/Fr ontTab.php?nota=".$notapost."&cnpjpost=".$cnpjpost);
         exit;
     };
-}
+};
 
 
 
@@ -37,8 +37,8 @@ if ($id & $nome & $email & $user & $senha_criptografada) { //se os dados tiverem
     $sql->bindValue(':senha', $senha_criptografada);
     $sql->execute();
     $_SESSION['updateuser'] = 'Dados do usuário atualizado com sucesso';
-    //ele vai pra home independente ódio
-    header('Location: ../views/home.php');
+    //pedir ajuda losekann
+    header('Location: ../views/login.php');
     // header("location:  ../views/editar-user.php?id=" . $id);
     exit;
 } else {

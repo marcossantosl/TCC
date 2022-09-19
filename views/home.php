@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../assets/css/main.css" />
 
-    <title>Marketing Website</title>
+    <title>IFC Guide</title>
 </head>
 
 <body>
@@ -45,68 +45,75 @@
                     <a class="navbar-brand" href="#">
                         <img src="../assets/images/logo.svg" class="img-fluid" />
                     </a>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-
-                        <aside>
-                            <div id='menu-opener'>
-                                <img onclick="menuTogle()" class="img-fluid nav-home-image" src="../assets/images/user.svg" />
+                        <ul class="navbar-nav">
+                            <!-- verificação de adm -->
+                            <?php if ($info['admuser'] == 1) { ?>
+                                <li class="nav-item">
+                                    <a class="nav-link active" onclick="window.location.href  = 'editarusers.php?admuser=<?= $info['id']; ?>'">Editar usuários</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Editar administradores</a>
+                                </li>
+                                <?php }; ?>
+                        </ul>
+                </nav>
+                <!-- aside do usuário -->
+                <aside>
+                    <div id='menu-opener'>
+                        <img onclick="menuTogle()" class="img-fluid nav-home-image" src="../assets/images/user.svg" />
+                    </div>
+                    <div id="menu-area">
+                        <div class="user-area">
+                            <div class="welcome">
+                                <p>
+                                    <?php
+                                    if (isset($info['nome'])) {
+                                        echo "<b>Seja bem vindo " . $info['nome'] . "</b>";
+                                    }
+                                    ?>
+                                </p>
+                                <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
-                            <div id="menu-area">
-                                <div class="user-area">
-                                    <div class="welcome">
-                                        <p>
-                                            <?php
-                                            if (isset($info['nome'])) {
-                                                echo "<b>Seja bem vindo " . $info['nome'] . "</b>";
-                                            }
-                                            ?>
-                                        </p>
-                                        <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
-                                    </div>
-                                    <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg.png">
-                                    <div class="dados-user">
-                                        <label> Nome: </label>
-                                        <p>
-                                            <?php
-                                            if (isset($info['nome'])) {
-                                                echo $info['nome'];
-                                            }
-                                            ?>
-                                        </p>
-                                        <label> Usuário: </label>
-                                        <p>
-                                            <?php
-                                            if (isset($info['user'])) {
-                                                echo $info['user'];
-                                            }
-                                            ?>
-                                        </p>
-                                        <label> Email: </label>
-                                        <p>
-                                            <?php
-                                            if (isset($info['email'])) {
-                                                echo $info['email'];
-                                            }
-                                            ?>
-                                        </p>
-                                    </div>
-                                    <div class="buttons-area">
-                                        <button class="buttons" onclick="(()=>{
+                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg.png">
+                            <div class="dados-user">
+                                <label> Nome: </label>
+                                <p>
+                                    <?php
+                                    if (isset($info['nome'])) {
+                                        echo $info['nome'];
+                                    }
+                                    ?>
+                                </p>
+                                <label> Usuário: </label>
+                                <p>
+                                    <?php
+                                    if (isset($info['user'])) {
+                                        echo $info['user'];
+                                    }
+                                    ?>
+                                </p>
+                                <label> Email: </label>
+                                <p>
+                                    <?php
+                                    if (isset($info['email'])) {
+                                        echo $info['email'];
+                                    }
+                                    ?>
+                                </p>
+                            </div>
+                            <div class="buttons-area">
+                                <button class="buttons" onclick="(()=>{
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
-                                        <button onclick="window.location.href  = 'editar-user.php?id=<?= $_SESSION['id']; ?>'" class=" buttonss">Editar perfil</button>
-                                    </div>
-
-                                </div>
+                                <button onclick="window.location.href  = 'editar-user.php?id=<?= $_SESSION['id']; ?>'" class=" buttonss">Editar perfil</button>
                             </div>
-                    </div>
-                    </aside>
+                </aside>
             </div>
-            </nav>
-        </div>
         </div>
     </header>
     <!--HEADER-->

@@ -1,18 +1,5 @@
-/* cadastro e login*/
-
-.containerAcesso {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.containerAcesso h2 {
-    margin-bottom: 30px;
-}
-
-.buttons {
-    max-width: 200px;
+.buttons-user {
+    max-width: 130px;
     width: 50%;
     background-color: black;
     border-radius: 28px;
@@ -26,17 +13,17 @@
     outline: none;
 }
 
-.buttons:hover {
+.buttons-user:hover {
     background-color: #111111;
 }
 
-.buttons:active {
+.buttons-user:active {
     position: relative;
     top: 1px;
 }
 
-.buttonss {
-    max-width: 200px;
+.buttonss-user {
+    max-width: 130px;
     width: 50%;
     background-color: rgb(255, 255, 255);
     border-radius: 28px;
@@ -51,35 +38,11 @@
     border: 1px solid black;
 }
 
-.buttonss:hover {
+.buttonss-user:hover {
     background-color: #f7f4f4;
 }
 
-.buttonss:active {
+.buttonss-user:active {
     position: relative;
     top: 1px;
-}
-
-
-.input {
-    min-width: 280px;
-    border-radius: 22px;
-    border: 2px #0c0c0c solid;
-    padding: 5px;
-    margin: 0px 0px 12px -5px;
-}
-
-.input input {
-    width: 80%;
-    border: none;
-    outline: none;
-    transform: translateY(-10%);
-    color: #0c0c0c;
-    font-size: 11pt;
-    background: none;
-}
-
-.input i {
-    font-size: 1.2em;
-    padding: 5px;
 }
