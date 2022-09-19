@@ -14,28 +14,8 @@
 
 <body>
     <?php
-    session_start();
-
-    if ($_SESSION['id'] === false) {
-        header('Location: login.php');
-        exit;
-    }
+    require('../php/getuser.php');
     require('../php/config.php');
-    $info = [];
-    $id = $_SESSION['id'];
-
-
-    //importante
-    if ($id) {
-        $sql = $pdo->prepare('SELECT * FROM usuario WHERE id = :id');
-        $sql->bindValue('id', $id);
-        $sql->execute();
-
-        if ($sql->rowCount() > 0) {
-
-            $info = $sql->fetch(PDO::FETCH_ASSOC);
-        }
-    }
     ?>
     <!--HEADER-->
     <header>
@@ -54,12 +34,12 @@
                             <!-- verificação de adm -->
                             <?php if ($info['admuser'] == 1) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" onclick="window.location.href  = 'editarusers.php?admuser=<?= $info['id']; ?>'">Editar usuários</a>
+                                    <a class="nav-link active" href="admin-users.php">Editar usuários</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#">Editar administradores</a>
                                 </li>
-                                <?php }; ?>
+                            <?php }; ?>
                         </ul>
                 </nav>
                 <!-- aside do usuário -->
@@ -110,7 +90,7 @@
                                 <button class="buttons" onclick="(()=>{
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
-                                <button onclick="window.location.href  = 'editar-user.php?id=<?= $_SESSION['id']; ?>'" class=" buttonss">Editar perfil</button>
+                                <button onclick="window.location.href  = 'editar-user.php '" class=" buttonss">Editar perfil</button>
                             </div>
                 </aside>
             </div>
