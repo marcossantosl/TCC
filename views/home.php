@@ -14,8 +14,9 @@
 
 <body>
     <?php
-    require('../php/getuser.php');
+    require('../php/getusers.php');
     require('../php/config.php');
+
     ?>
     <!--HEADER-->
     <header>
@@ -37,7 +38,7 @@
                                     <a class="nav-link active" href="admin-users.php">Editar usuários</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Editar administradores</a>
+                                    <a class="nav-link active" href="admin-definir-admins.php">Editar administradores</a>
                                 </li>
                             <?php }; ?>
                         </ul>

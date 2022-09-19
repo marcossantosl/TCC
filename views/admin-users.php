@@ -1,6 +1,6 @@
 <?php
 require('../php/config.php');
-require('../php/getuser.php');
+require('../php/getusers.php');
 
 if ($info['admuser'] == 0) {
   header('location: home.php');
@@ -28,32 +28,28 @@ if ($info['admuser'] == 0) {
     <table class="table table-striped table-dark">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Primeiro</th>
-          <th scope="col">Último</th>
-          <th scope="col">Nickname</th>
+          <th scope="col">id</th>
+          <th scope="col">Nome</th>
+          <th scope="col">User</th>
+          <th scope="col">Email</th>
+          <th scope="col">Ações</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        <?php foreach ($infoall as $info) : ?>
+          <tr>
+            <td><?php echo $info['id']; ?></td>
+            <td><?php echo $info['nome']; ?></td>
+            <td><?php echo $info['user']; ?></td>
+            <td><?php echo $info['email']; ?></td>
+            <td>
+              <a href="admin-editar-user.php?id=<?= $info['id']; ?>">Editar</a>
+              <a href="../php/admin-deleteuser.php?id=<?= $info['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+              <!-- Botões para editar e excluir o registro na tabela -->
+            </td>
+          </tr>
       </tbody>
+    <?php endforeach; ?>
     </table>
   </div>
 

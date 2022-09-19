@@ -1,6 +1,31 @@
 <?php
 require('../php/config.php');
-require('../php/getusers.php')
+require('../php/getusers.php');
+
+if ($info['admuser'] == 0) {
+    header('location: home.php');
+}
+
+$info = [];
+$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT); //capturando o id 
+
+if ($id) { //se o id tiver correto
+    $sql = $pdo->prepare('SELECT * FROM usuario WHERE id = :id'); //seleciona na tabela onde o campo for id
+    $sql->bindValue('id', $id); //e associa com a variável id
+    $sql->execute();
+
+    if ($sql->rowCount() > 0) { // se existir um registro com o id(for maior que 0)
+
+        $info = $sql->fetch(PDO::FETCH_ASSOC); //associa ele a variável info e grava a linha com o conjunto de resultados dos valores do campo id  
+    } else {
+        header('Location: ../views/admin-users.php');
+        exit;
+    }
+} else {
+    header('Location:../views/admin-users.php');
+    exit;
+}
+
 ?>
 
 <head>
@@ -51,7 +76,7 @@ require('../php/getusers.php')
             <!-- })()" -->
             <div class="buttons-area">
                 <input class="buttons-user" type="submit" value="Salvar">
-                <button class="buttonss-user" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</button>
+                <button class="buttonss-user" href="../php/admin-deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</button>
             </div>
         </form>
     </div>

@@ -10,7 +10,7 @@ $senha = filter_input(INPUT_POST, 'password');
 $rsenha = filter_input(INPUT_POST, 'rpassword');
 $senha_criptografada = password_hash($senha, PASSWORD_DEFAULT);
 
-//PEDIR AJUDA LOSEKANN SEXTA NISSO
+//PEDIR AJUDA LOSEKANN SEGUNDA NISSO
 //se a senha não for vazia ele faz essa verificação tornando ela opcional
 if ($senha and $rsenha != "") { // se as senhas forem diferentes de ""
     if ($senha != $rsenha) { //verifica se as senhas sao iguais
