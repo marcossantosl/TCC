@@ -6,6 +6,16 @@ aside {
     display: flex;
 }
 
+.user-delete a {
+    text-decoration: none;
+    color: red;
+
+}
+
+.user-delete {
+    margin-top: 30px;
+}
+
 #menu-opener {
     cursor: pointer;
     margin-top: 30px;
@@ -38,8 +48,6 @@ aside {
     background-color: #DDD;
 }
 
-
-.menu-area {}
 
 .welcome {
     display: flex;

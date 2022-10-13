@@ -1,6 +1,7 @@
 <?php
 require('../php/config.php');
-require('../php/getusers.php')
+require('../php/getusers.php');
+require('header.php');
 ?>
 
 <head>
@@ -18,8 +19,26 @@ require('../php/getusers.php')
 
 <div class="containerAcesso">
     <div class="editar-area">
-        <form method='POST' action='../php/editaruser.php'>
-            <h2>Editar usuário</h2>
+        <h2>Editar usuário</h2>
+        <?php
+
+        if (isset($_SESSION['avisoSenha'])) {
+            echo $_SESSION['avisoSenha'];
+            $_SESSION['avisoSenha'] = "";
+        }
+
+        if (isset($_SESSION['tamanhoSenha'])) {
+            echo $_SESSION['tamanhoSenha'];
+            $_SESSION['tamanhoSenha'] = "";
+        }
+
+        if (isset($_SESSION['senhaVazio'])) {
+            echo $_SESSION['senhaVazio'];
+            $_SESSION['senhaVazio'] = "";
+        }
+        ?>
+        <form method='POST' action='../php/editaruser.php' enctype="multipart/form-data">
+
             <input type="hidden" name="id" value="<?= $info['id']; ?>">
             <div class="input">
                 <i class="fa fa-user-graduate"></i>
@@ -45,13 +64,15 @@ require('../php/getusers.php')
                 <i class="fa fa-lock"></i>
                 <input type="password" name="rpassword" placeholder="repita a senha">
             </div>
-
+            <div class="input">
+                <i class="fa-light fa-folder"></i>
+                <input type="file" name="fotouser" />
+            </div>
             <!-- onclick="(()=>{ -->
             <!-- if(confirm('Deseja mesmo sair'))location.href='../php/logout.php'; -->
             <!-- })()" -->
             <div class="buttons-area">
                 <input class="buttons-user" type="submit" value="Salvar">
-                <button class="buttonss-user" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</button>
             </div>
         </form>
     </div>

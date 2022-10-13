@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-
+    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <title>IFC Guide</title>
@@ -16,7 +16,18 @@
     <?php
     require('../php/getusers.php');
     require('../php/config.php');
-
+    $sql = $pdo->prepare("SELECT * from usuarioimagem WHERE iduser = :iduser ORDER BY id DESC LIMIT 1");
+    $sql->bindValue(':iduser', $id);
+    $sql->execute();
+    $photo = "/assets/images/userimg.png";
+    if ($sql->rowCount() > 0) {
+        $photo = $sql->fetch(PDO::FETCH_ASSOC);
+        $photo = $photo['userimagem'];
+    }
+    if ($_SESSION['id'] === false) {
+        header('Location: ../views/login.php');
+        exit;
+    }
     ?>
     <!--HEADER-->
     <header>
@@ -35,10 +46,10 @@
                             <!-- verificação de adm -->
                             <?php if ($info['admuser'] == 1) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="admin-users.php">Editar usuários</a>
+                                    <a class="nav-link active" href="painel-users.php">Editar usuários</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="admin-definir-admins.php">Editar administradores</a>
+                                    <a class="nav-link active" href="painel-adm.php">Editar administradores</a>
                                 </li>
                             <?php }; ?>
                         </ul>
@@ -60,8 +71,8 @@
                                 </p>
                                 <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
-                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg.png">
-                            <div class="dados-user">
+                            <img class="img-user w-50 p-3 rounded-circle" src="/TCC<?= $photo ?>">
+                            <div class=" dados-user">
                                 <label> Nome: </label>
                                 <p>
                                     <?php
@@ -92,6 +103,10 @@
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
                                 <button onclick="window.location.href  = 'editar-user.php '" class=" buttonss">Editar perfil</button>
+                            </div>
+                            <div class="user-delete">
+                                <i" aria-hidden="true"></i>
+                                    <a href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
                             </div>
                 </aside>
             </div>
@@ -125,7 +140,7 @@
             let menuArea = document.querySelector('#menu-area');
 
             if (menuArea.style.width == '0px') {
-                menuArea.style.width = '450px';
+                menuArea.style.width = '500px';
             } else {
                 menuArea.style.width = '0px';
             };

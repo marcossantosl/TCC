@@ -1,6 +1,7 @@
 <?php
 require('../php/config.php');
 require('../php/getusers.php');
+require('header.php');
 
 if ($info['admuser'] == 0) {
   header('location: home.php');
@@ -20,7 +21,7 @@ if ($info['admuser'] == 0) {
 
   <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 
-  <title>Marketing Website</title>
+  <title>IFC Guide</title>
 </head>
 
 <body>
@@ -43,7 +44,7 @@ if ($info['admuser'] == 0) {
             <td><?php echo $info['user']; ?></td>
             <td><?php echo $info['email']; ?></td>
             <td>
-              <a href="admin-editar-user.php?id=<?= $info['id']; ?>">Editar</a>
+              <a href="adm-editar-users.php?id=<?= $info['id']; ?>">Editar</a>
               <a href="../php/admin-deleteuser.php?id=<?= $info['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
               <!-- Botões para editar e excluir o registro na tabela -->
             </td>

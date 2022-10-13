@@ -1,6 +1,7 @@
 <?php
 require('../php/config.php');
 require('../php/getusers.php');
+require('header.php');
 
 if ($info['admuser'] == 0) {
     header('location: home.php');
@@ -20,35 +21,45 @@ if ($info['admuser'] == 0) {
 
     <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 
-    <title>Marketing Website</title>
+    <title>IFC Guide</title>
 </head>
 
 <body>
     <div class="container">
-        <table class="table table-striped table-dark">
+        <table class="table table-dark ">
             <thead>
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">User</th>
-                    <th scope="col">Administrador</th>
+                    <th scope="col">Andar</th>
+                    <th scope="col">Bloco ou região</th>
+                    <th scope="col">Descricao</th>
+                    <th scope="col">Funcionários</th>
+                    <th scope="col">Alunos</th>
                     <th scope="col">Ações</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($infoall as $info) : ?>
-                    <tr>
-                        <td><?php echo $info['id']; ?></td>
-                        <td><?php echo $info['nome']; ?></td>
-                        <td><?php echo $info['user']; ?></td>
-                        <td><?php echo $info['admuser']; ?></td>
-                        <td>
-                            <a href="../php/admin.php?id=<?= $info['id']; ?>">Alterar (1 para adm)</a>
-                            <!-- Botões para editar e excluir o registro na tabela -->
-                        </td>
-                    </tr>
+                <?php if (isset($local)) {
+                    foreach ($local as $item) : ?>
+                        <tr>
+                            <td><?php echo $item['id']; ?></td>
+                            <td><?php echo $item['nome']; ?></td>
+                            <td><?php echo $item['andar']; ?></td>
+                            <td><?php echo $item['bloco']; ?></td>
+                            <td><?php echo $item['descricaofisica']; ?></td>
+                            <td><?php echo $item['funcionarios']; ?></td>
+                            <td><?php echo $item['alunos']; ?></td>
+                            <td>
+                                <a href="editar-local.php?id=<?= $item['id']; ?>">Editar</a>
+                                <a href="../php/admin-deletelocal.php?id=<?= $item['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                <!-- Botões para editar e excluir o registro na tabela -->
+                            </td>
+                        </tr>
             </tbody>
-        <?php endforeach; ?>
+    <?php endforeach;
+                }; ?>
         </table>
     </div>
 

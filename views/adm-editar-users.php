@@ -1,6 +1,7 @@
 <?php
 require('../php/config.php');
 require('../php/getusers.php');
+require('header.php');
 
 if ($info['admuser'] == 0) {
     header('location: home.php');
@@ -18,11 +19,11 @@ if ($id) { //se o id tiver correto
 
         $info = $sql->fetch(PDO::FETCH_ASSOC); //associa ele a variável info e grava a linha com o conjunto de resultados dos valores do campo id  
     } else {
-        header('Location: ../views/admin-users.php');
+        header('Location: painel-users.php');
         exit;
     }
 } else {
-    header('Location:../views/admin-users.php');
+    header('Location: painel-users.php');
     exit;
 }
 
@@ -38,7 +39,7 @@ if ($id) { //se o id tiver correto
 
     <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 
-    <title>Marketing Website</title>
+    <title>IFC Guide</title>
 </head>
 
 <div class="containerAcesso">

@@ -1,6 +1,8 @@
+<!-- mão deleta o user -->
+
 <?php
 require('config.php');
-require('getuser.php');
+require('getusers.php');
 $id = $info['id'];
 
 if ($id) {

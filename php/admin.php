@@ -3,9 +3,10 @@ require('config.php');
 require('getusers.php');
 
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT); //capturando o id 
-
+if ($info['admuser'] == 0) header('Location: ../views/home.php');
+$user = getUserById($id);
 if ($id) {
-    if ($infoall['admuser'] = 1) {
+    if ($user['admuser'] == 0) {
         $sql = $pdo->prepare("UPDATE usuario SET admuser = 1 where id = :id");
         $sql->bindValue(':id', $id);
         $sql->execute();

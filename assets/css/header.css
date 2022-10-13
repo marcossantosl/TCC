@@ -3,8 +3,13 @@
     background-color: transparent;
 }
 
+.navbar {
+    justify-content: space-between;
+}
+
 #header .container {
     border-bottom: solid 4px black;
+    margin-bottom: 50px;
 }
 
 #header.active {

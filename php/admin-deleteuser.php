@@ -10,5 +10,5 @@ if ($id) { //se o id tiver correto
     $sql->execute();
 }
 
-header('Location: ../views/admin-users.php');
+header('Location: ../views/painel-users.php');
 exit;
