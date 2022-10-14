@@ -71,11 +71,11 @@
                                 </p>
                                 <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
-                            <img class="img-user w-50 p-3 rounded-circle" src="/TCC<?= $photo ?>">
-                            <div class=" dados-user">
+                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/images.jpg">
+                            <div class="dados-user">
                                 <label> Nome: </label>
                                 <p>
-                                    <?php
+                                <?php
                                     if (isset($info['nome'])) {
                                         echo $info['nome'];
                                     }
@@ -83,31 +83,33 @@
                                 </p>
                                 <label> Usuário: </label>
                                 <p>
-                                    <?php
+                                <?php
                                     if (isset($info['user'])) {
                                         echo $info['user'];
-                                    }
-                                    ?>
-                                </p>
+                                    }                                   </p>
                                 <label> Email: </label>
                                 <p>
-                                    <?php
-                                    if (isset($info['email'])) {
-                                        echo $info['email'];
-                                    }
-                                    ?>
+                                <?php
+                                if (isset($info['email'])) {
+                                    echo $info['email'];
+                                }
+                                ?>
                                 </p>
-                            </div>
-                            <div class="buttons-area">
-                                <button class="buttons" onclick="(()=>{
+                                <div class="botoes">
+                                <button class="botao-aside" onclick="(()=>{
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
-                                <button onclick="window.location.href  = 'editar-user.php '" class=" buttonss">Editar perfil</button>
-                            </div>
-                            <div class="user-delete">
-                                <i" aria-hidden="true"></i>
-                                    <a href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
-                            </div>
+                                <button onclick="window.location.href  = 'editar-user.php '" class=" botao-aside2">Editar perfil</button>
+                                </div>
+                        </div>
+                        <div id="admfunctions">
+                        <?php  if($info['admuser'] == 1) {?>
+                            <h4>Funções administrativas</h4>
+                            <br/>
+                            <button id="admbotao" onclick="window.location.href = 'delete-users.php'">Editar usuários</button>
+                        <?php };?>
+                        </div>
+                </div>
                 </aside>
             </div>
         </div>
