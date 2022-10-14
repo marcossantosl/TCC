@@ -26,13 +26,18 @@ if ($info['admuser'] == 0) {
 
 <body>
     <div class="container">
-        <table class="table table-dark ">
+
+        <div class="buttons-ares">
+            <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+            <a class="back-button btn btn-success" href="cadastro-local.php">Cadastrar local</a>
+        </div>
+        <table class="table table-responsive table-hover ">
             <thead>
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Andar</th>
-                    <th scope="col">Bloco ou região</th>
+                    <th scope="col">Região</th>
                     <th scope="col">Descricao</th>
                     <th scope="col">Funcionários</th>
                     <th scope="col">Alunos</th>
@@ -52,8 +57,8 @@ if ($info['admuser'] == 0) {
                             <td><?php echo $item['funcionarios']; ?></td>
                             <td><?php echo $item['alunos']; ?></td>
                             <td>
-                                <a href="editar-local.php?id=<?= $item['id']; ?>">Editar</a>
-                                <a href="../php/admin-deletelocal.php?id=<?= $item['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                <a class="table-button btn btn-primary" href="editar-local.php?id=<?= $item['id']; ?>">Editar</a>
+                                <a class="table-button btn btn-danger" href="../php/admin-deletelocal.php?id=<?= $item['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                                 <!-- Botões para editar e excluir o registro na tabela -->
                             </td>
                         </tr>

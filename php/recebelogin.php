@@ -18,8 +18,6 @@ $sql->bindValue(':user', $user);
 $sql->bindValue(':email', $email);
 $sql->execute();
 
-
-
 $userObj = $sql->fetch(PDO::FETCH_ASSOC);
 $senhaCriptografada = $userObj['senha'];
 if (!$sql->rowCount() > 1) {

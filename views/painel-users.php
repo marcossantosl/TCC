@@ -26,7 +26,8 @@ if ($info['admuser'] == 0) {
 
 <body>
   <div class="container">
-    <table class="table table-striped table-dark">
+    <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+    <table class="table table-responsive table-hover ">
       <thead>
         <tr>
           <th scope="col">id</th>
@@ -44,8 +45,8 @@ if ($info['admuser'] == 0) {
             <td><?php echo $info['user']; ?></td>
             <td><?php echo $info['email']; ?></td>
             <td>
-              <a href="adm-editar-users.php?id=<?= $info['id']; ?>">Editar</a>
-              <a href="../php/admin-deleteuser.php?id=<?= $info['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+              <a class="table-button btn btn-primary" href="adm-editar-users.php?id=<?= $info['id']; ?>">Editar</a>
+              <a class="table-button btn btn-danger" href="../php/admin-deleteuser.php?id=<?= $info['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
               <!-- Botões para editar e excluir o registro na tabela -->
             </td>
           </tr>

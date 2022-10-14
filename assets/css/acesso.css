@@ -7,8 +7,15 @@
     justify-content: space-evenly;
 }
 
-.containerAcesso h2 {
+.containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container h2 {
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .buttons {

@@ -26,7 +26,8 @@ if ($info['admuser'] == 0) {
 
 <body>
     <div class="container">
-        <table class="table table-striped table-dark">
+        <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+        <table class="table table-responsive table-hover ">
             <thead>
                 <tr>
                     <th scope="col">id</th>
@@ -44,7 +45,7 @@ if ($info['admuser'] == 0) {
                         <td><?php echo $info['user']; ?></td>
                         <td><?php echo $info['admuser']; ?></td>
                         <td>
-                            <a href="../php/admin.php?id=<?= $info['id']; ?>">Alterar (1 para adm)</a>
+                            <a class="btn btn-warning" href="../php/admin.php?id=<?= $info['id']; ?>">Alterar (1 para adm)</a>
                             <!-- Botões para editar e excluir o registro na tabela -->
                         </td>
                     </tr>
@@ -52,7 +53,6 @@ if ($info['admuser'] == 0) {
         <?php endforeach; ?>
         </table>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
