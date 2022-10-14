@@ -104,9 +104,8 @@
                         </div>
                         <div id="admfunctions">
                         <?php  if($info['admuser'] == 1) {?>
-                            <h4>Funções administrativas</h4>
                             <br/>
-                            <button id="admbotao" onclick="window.location.href = 'delete-users.php'">Editar usuários</button>
+                            <button id="admbotao" onclick="window.location.href = 'delete-users.php'">Deletar usuário</button>
                         <?php };?>
                         </div>
                 </div>
