@@ -8,9 +8,7 @@
 
 .principal-area {
     display: flex;
-    margin-top: 100px;
-    height: 100vh;
-    justify-content: center;
+    margin-top: 50px;
 }
 
 .principal-area .funcao {
@@ -27,4 +25,24 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.locais {
+    background: #DDD;
+    border-radius: 15px;
+    margin-left: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+}
+
+.locais a {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.locaisImg {
+
 }

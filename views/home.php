@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/main.css" />
 
+    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
+
     <title>IFC Guide</title>
 </head>
 
@@ -71,7 +73,9 @@
                                 </p>
                                 <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
+                            <div class="imgUser">
                             <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/images.jpg">
+                            </div>
                             <div class="dados-user">
                                 <label> Nome: </label>
                                 <p>
@@ -121,7 +125,11 @@
     <div class="container">
         <main class="principal-area">
             <div class="funcao">
-
+                    <div class="locais">
+                        <img class="locaisImg" onclick="window.location.href = 'locais.php'" src="../assets/images/locais.png">
+                        <a> Locais </a>
+                    </div>
+                    
             </div>
         </main>
     </div>

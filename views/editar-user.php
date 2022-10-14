@@ -65,7 +65,7 @@ require('header.php');
                 <input type="password" name="rpassword" placeholder="repita a senha">
             </div>
             <div class="input">
-                <i class="fa-light fa-folder"></i>
+                <i class="fa fa-folder"></i>
                 <input type="file" name="fotouser" />
             </div>
             <!-- onclick="(()=>{ -->
