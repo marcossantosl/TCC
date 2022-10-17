@@ -46,6 +46,9 @@
                             <!-- verificação de adm -->
                             <?php if ($info['admuser'] == 1) { ?>
                                 <li class="nav-item">
+                                    <a class="nav-link active" href="painel-locais.php">Painel locais</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link active" href="painel-users.php">Editar usuários</a>
                                 </li>
                                 <li class="nav-item">
@@ -99,14 +102,14 @@
                                 </p>
                             </div>
                             <div class="buttons-area">
-                                <button class="buttons" onclick="(()=>{
+                                <button onclick="window.location.href  = 'editar-user.php '" class="button-aside btn btn-lg btn-primary">Editar perfil</button>
+                                <button class="button-aside btn btn-lg btn-warning" onclick="(()=>{
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
-                                <button onclick="window.location.href  = 'editar-user.php '" class=" buttonss">Editar perfil</button>
                             </div>
                             <div class="user-delete">
                                 <i" aria-hidden="true"></i>
-                                    <a href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
+                                    <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
                             </div>
                 </aside>
             </div>
@@ -119,8 +122,9 @@
 
     <div class="container">
         <main class="principal-area">
-            <div class="funcao">
-
+            <div class="locais">
+                <img class="locaisImg" onclick="window.location.href = 'andares.php'" src="../assets/images/locais.svg">
+                <a> Locais </a>
             </div>
         </main>
     </div>
@@ -140,7 +144,7 @@
             let menuArea = document.querySelector('#menu-area');
 
             if (menuArea.style.width == '0px') {
-                menuArea.style.width = '500px';
+                menuArea.style.width = '600px';
             } else {
                 menuArea.style.width = '0px';
             };

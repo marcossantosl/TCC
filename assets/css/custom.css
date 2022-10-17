@@ -47,3 +47,8 @@ table th {
   font-size: 25px;
   text-transform: uppercase;
 }
+
+.button-aside {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
