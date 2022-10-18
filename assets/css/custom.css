@@ -18,37 +18,5 @@
   margin-bottom: 60px;
 }
 
-.back-button {
-  margin-bottom: 25px;
-  font-size: 20px;
-  text-transform: uppercase;
-}
 
-.geral {
-  width: 700px;
-}
 
-.botoes {
-  align-items: center;
-}
-
-table th {
-  text-transform: uppercase;
-}
-
-.table-button {
-  margin-bottom: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-.local-button {
-  margin-bottom: 20px;
-  font-size: 25px;
-  text-transform: uppercase;
-}
-
-.button-aside {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}

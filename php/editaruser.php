@@ -49,7 +49,7 @@ if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png'))) 
     move_uploaded_file($fotouser['tmp_name'], '../assets/images/userimg/' . $imgname); //selecionando o lugar de onde o arquivo é movido temporariamente, e o movendo depois para a pasta arquivos 
     $sql = $pdo->prepare("INSERT INTO usuarioimagem (iduser, userimagem) VALUES (:iduser, :userimg)");
     $sql->bindValue(':iduser', $id);
-    $sql->bindValue(':userimg', "/assets/images/userimg/$imgname");
+    $sql->bindValue(':userimg', $imgname);
     $sql->execute();
 } else {
     $_SESSION['extensao'] = "Extensão não permitida";

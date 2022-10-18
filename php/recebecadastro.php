@@ -2,7 +2,7 @@
 require("./config.php");
 session_start();
 
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$nome = filter_input(INPUT_POST, 'nome');
 $user = filter_input(INPUT_POST, 'user');
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
@@ -14,7 +14,7 @@ $rsenha = filter_input(INPUT_POST, 'rpassword');
 //SESSÕES 
 
 //CAMPOS VAZIOS
-if (!$nome and !$user and !$email) {
+if ($nome == "" and $user == "" and $email == "") {
     $_SESSION['aviso!'] =  "<b><font color='red'> Verifique seus campos </font></b>";
     header("Location: ../views/cadastro.php");
     exit;
@@ -29,11 +29,10 @@ if ($senha != $rsenha) {
     header("Location: ../views/cadastro.php");
     exit;
 };
-// FIM SESSÕES
 
 //GRAVAR DB
 
-if ($user and $email) {
+if ($nome and $user and $email) {
 
     $sql = $pdo->prepare("SELECT * FROM usuario.usuario WHERE user = :user or email = :email");
     $sql->bindValue(':user', $user);
@@ -58,7 +57,7 @@ if ($user and $email) {
         exit;
     }
 } else {
-    $_SESSION['aviso!'];
+    $_SESSION['aviso!'] = "<b><font color='red'> Verifique seus campos </font></b>";; 
     header("Location: ../views/cadastro.php");
     exit;
 };

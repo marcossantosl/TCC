@@ -7,6 +7,18 @@ html {
   background-color: #F8F0E3;
 }
 
-body {
-  /* background: url(../assets/footer-bg.png) no-repeat center bottom; */
+.back-button {
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.table-button {
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+table th {
+  text-transform: uppercase;
 }

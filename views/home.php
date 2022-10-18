@@ -74,7 +74,7 @@
                                 </p>
                                 <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
-                            <img class="img-user w-50 p-3 rounded-circle" src="/TCC<?= $photo ?>">
+                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png';?>">
                             <div class=" dados-user">
                                 <label> Nome: </label>
                                 <p>

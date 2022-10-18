@@ -1,0 +1,27 @@
+.geral {
+    width: 100%;
+}
+
+.areas {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes {
+    padding-right: 100px;
+    width: 100%;
+}
+
+.video {
+    padding-left: 100px;
+    border-left: 3px solid black;
+    height: 400px;
+}
+
+.local-button {
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+}

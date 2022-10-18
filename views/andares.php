@@ -23,15 +23,20 @@ require('header.php');
     <div class="container">
         <div class="geral">
             <a class="back-button btn btn-dark" href="home.php">Voltar</a>
-            <div class="botoes">
-                <?php foreach ($andares as $andar) : ?>
-                    <div>
-                        <a class="local-button btn btn-success btn-md btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
-                    </div>
-                <?php endforeach; ?>
+            <div class="areas">
+                <div class="botoes">
+                    <?php foreach ($andares as $andar) : ?>
+                        <div>
+                            <a class="local-button btn btn-success btn-md btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="video">
+                    <h2> Tour geral IFC-CAS </h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3HHmFCB9XVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
