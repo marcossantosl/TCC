@@ -47,10 +47,30 @@ if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png'))) 
     $name = 'user-img-' . $id;
     $imgname = $name . '.' . explode('/', $fotouser['type'])[1];
     move_uploaded_file($fotouser['tmp_name'], '../assets/images/userimg/' . $imgname); //selecionando o lugar de onde o arquivo é movido temporariamente, e o movendo depois para a pasta arquivos 
-    $sql = $pdo->prepare("INSERT INTO usuarioimagem (iduser, userimagem) VALUES (:iduser, :userimg)");
-    $sql->bindValue(':iduser', $id);
-    $sql->bindValue(':userimg', $imgname);
-    $sql->execute();
+
+    $editimagem = [];
+
+    if ($fotouser) {
+        $sql = $pdo->prepare('SELECT * FROM  usuarioimagem WHERE iduser = :id');
+        $sql->bindValue('id', $id);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+
+            $editimagem = $sql->fetch(PDO::FETCH_ASSOC);
+        }
+    }
+    if ($editimagem) {
+        $sql = $pdo->prepare("UPDATE usuarioimagem SET userimagem =  :userimg WHERE iduser = :id");
+        $sql->bindValue(':id', $id);
+        $sql->bindValue(':userimg', $imgname);
+        $sql->execute();
+    } else {
+        $sql = $pdo->prepare("INSERT INTO usuarioimagem (iduser, userimagem) VALUES (:iduser, :userimg)");
+        $sql->bindValue(':iduser', $id);
+        $sql->bindValue(':userimg', $imgname);
+        $sql->execute();
+    };
 } else {
     $_SESSION['extensao'] = "Extensão não permitida";
     header("location:  ../views/editar-user.php?id=" . $id);

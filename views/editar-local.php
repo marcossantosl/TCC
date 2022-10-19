@@ -74,16 +74,16 @@ if ($id) {
                     </select>
                 </div>
                 <div class="form-floating w-100">
-                    <a>Descrição</a>
-                    <textarea class="form-control" cols=40 rows="7" name="descricao" maxlength="300" wrap="hard" placeholder="Descrição do ambiente (Descrição física, ponto de referência etc..)"><?= $info['descricaofisica']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="5" name="descricao" maxlength="300" wrap="hard" placeholder="Descrição física do ambiente, de preferência detalhada, como posição das mesas e demais objetos presentes no local"></textarea>
                 </div>
                 <div class="form-floating w-100">
-                    <a>Funcionários</a>
-                    <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="300" wrap="hard" placeholder="Funcionários ou professores que frequentam o local"><?= $info['funcionarios']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="5" name="rota" maxlength="300" wrap="hard" placeholder="Modo de chegar, pontos de referências, e distância aproximada em metros e passos"></textarea>
                 </div>
                 <div class="form-floating w-100">
-                    <a>Discentes</a>
-                    <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="300" wrap="hard" placeholder="Discentes que frequentam o local"><?= $info['alunos']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="300" wrap="hard" placeholder="Funcionários ou professores que frequentam o local"></textarea>
+                </div>
+                <div class="form-floating w-100">
+                    <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="300" wrap="hard" placeholder="Discentes que frequentam o local"></textarea>
                 </div>
                 <br />
                 <div class="buttons-area">

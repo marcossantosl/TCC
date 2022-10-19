@@ -19,7 +19,6 @@
     $sql = $pdo->prepare("SELECT * from usuarioimagem WHERE iduser = :iduser ORDER BY id DESC LIMIT 1");
     $sql->bindValue(':iduser', $id);
     $sql->execute();
-    $photo = "/assets/images/userimg.png";
     if ($sql->rowCount() > 0) {
         $photo = $sql->fetch(PDO::FETCH_ASSOC);
         $photo = $photo['userimagem'];
@@ -74,7 +73,7 @@
                                 </p>
                                 <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
                             </div>
-                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png';?>">
+                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
                             <div class=" dados-user">
                                 <label> Nome: </label>
                                 <p>

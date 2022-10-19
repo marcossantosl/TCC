@@ -39,6 +39,7 @@ if ($info['admuser'] == 0) {
                     <th scope="col">Andar</th>
                     <th scope="col">Região</th>
                     <th scope="col">Descricao</th>
+                    <th scope="col">Rota</th>
                     <th scope="col">Funcionários</th>
                     <th scope="col">Alunos</th>
                     <th scope="col">Ações</th>
@@ -54,6 +55,7 @@ if ($info['admuser'] == 0) {
                             <td><?php echo $item['andar']; ?></td>
                             <td><?php echo $item['bloco']; ?></td>
                             <td><?php echo $item['descricaofisica']; ?></td>
+                            <td><?php echo $item['rota']; ?></td>
                             <td><?php echo $item['funcionarios']; ?></td>
                             <td><?php echo $item['alunos']; ?></td>
                             <td>

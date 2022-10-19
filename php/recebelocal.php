@@ -10,8 +10,9 @@ $bloco = filter_input(INPUT_POST, 'bloco', FILTER_DEFAULT);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_DEFAULT);
 $funcionarios = filter_input(INPUT_POST, 'funcionarios', FILTER_DEFAULT);
 $alunos = filter_input(INPUT_POST, 'alunos', FILTER_DEFAULT);
+$rota = filter_input(INPUT_POST, 'rota', FILTER_DEFAULT);
 
-if (!$nome and !$funcao and !$andar and !$bloco and !$descricao and !$funcionarios and !$alunos) {
+if (!$nome and !$funcao and !$andar and !$bloco and !$descricao and !$funcionarios and !$alunos and !$rota) {
     $_SESSION['aviso'] =  "<b><font color='red'> Verifique seus campos </font></b>";
     header("Location: ../views/cadastro-local.php");
     exit;
@@ -25,12 +26,13 @@ if ($nome) {
 
 
     if ($sql->rowCount() == 0) {
-        $sql = $pdo->prepare("INSERT INTO locais (nome, funcao, descricaofisica, funcionarios, alunos, idandar, bloco ) 
-        VALUES (:nome, :funcao, :descricao, :funcionarios, :alunos, :id, :bloco)");
+        $sql = $pdo->prepare("INSERT INTO locais (nome, funcao, descricaofisica, rota, funcionarios, alunos, idandar, bloco ) 
+        VALUES (:nome, :funcao, :descricao, :rota, :funcionarios, :alunos, :id, :bloco)");
 
         $sql->bindValue(':nome', $nome);
         $sql->bindValue(':funcao', $funcao);
         $sql->bindValue(':descricao', $descricao);
+        $sql->bindValue(':rota', $rota);
         $sql->bindValue(':funcionarios', $funcionarios);
         $sql->bindValue(':alunos', $alunos);
         $sql->bindValue(':id', $andar);

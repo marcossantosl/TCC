@@ -27,7 +27,7 @@ require('header.php');
                 <div class="botoes">
                     <?php foreach ($andares as $andar) : ?>
                         <div>
-                            <a class="local-button btn btn-success btn-md btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
+                            <a class="local-button btn btn-outline-dark btn-lg btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
                         </div>
                     <?php endforeach; ?>
                 </div>

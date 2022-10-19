@@ -11,13 +11,15 @@ $bloco = filter_input(INPUT_POST, 'bloco', FILTER_DEFAULT);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_DEFAULT);
 $funcionarios = filter_input(INPUT_POST, 'funcionarios', FILTER_DEFAULT);
 $alunos = filter_input(INPUT_POST, 'alunos', FILTER_DEFAULT);
+$rota = filter_input(INPUT_POST, 'rota', FILTER_DEFAULT);
 
 
-if ($id & $nome & $funcao & $andar & $bloco & $descricao & $funcionarios  & $alunos) {
-    $sql = $pdo->prepare("UPDATE locais SET nome = :nome, funcao = :funcao, descricaofisica = :descricao, bloco = :bloco, idandar = :idandar, alunos = :alunos, funcionarios = :funcionarios WHERE id = :id");
+if ($id & $nome & $funcao & $andar & $bloco & $descricao & $funcionarios  & $alunos & $rota) {
+    $sql = $pdo->prepare("UPDATE locais SET nome = :nome, funcao = :funcao, descricaofisica = :descricao, rota = :rota, bloco = :bloco, idandar = :idandar, alunos = :alunos, funcionarios = :funcionarios WHERE id = :id");
     $sql->bindValue(':nome', $nome);
     $sql->bindValue(':funcao', $funcao);
     $sql->bindValue(':descricao', $descricao);
+    $sql->bindValue(':rota', $rota);
     $sql->bindValue(':funcionarios', $funcionarios);
     $sql->bindValue(':alunos', $alunos);
     $sql->bindValue(':idandar', $andar);
