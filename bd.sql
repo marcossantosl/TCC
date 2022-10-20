@@ -1,5 +1,3 @@
--- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
---
 -- Host: localhost    Database: usuario
 -- ------------------------------------------------------
 -- Server version       5.5.5-10.4.24-MariaDB
@@ -35,7 +33,7 @@ CREATE TABLE `andar` (
 
 LOCK TABLES `andar` WRITE;
 /*!40000 ALTER TABLE `andar` DISABLE KEYS */;
-INSERT INTO `andar` VALUES (1,'1┬░ andar'),(2,'2┬░ andar'),(3,'3┬░ andar');
+INSERT INTO `andar` VALUES (1,'1┬░  andar'),(2,'2┬░  andar'),(3,'3┬░ andar');
 /*!40000 ALTER TABLE `andar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -48,16 +46,16 @@ DROP TABLE IF EXISTS `locais`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `locais` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricaofisica` varchar(500) NOT NULL,
+  `descricaofisica` varchar(1000) NOT NULL,
   `funcionarios` varchar(200) NOT NULL,
   `nome` varchar(45) NOT NULL,
-  `funcao` varchar(100) NOT NULL,
+  `funcao` varchar(200) NOT NULL,
   `idandar` int(11) NOT NULL,
   `bloco` varchar(20) NOT NULL,
   `alunos` varchar(200) NOT NULL,
-  `rota` varchar(200) NOT NULL,
+  `rota` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +64,7 @@ CREATE TABLE `locais` (
 
 LOCK TABLES `locais` WRITE;
 /*!40000 ALTER TABLE `locais` DISABLE KEYS */;
-INSERT INTO `locais` VALUES (8,'Ap├│s chegar ao hall, a direita temos o sisae, \r\nseguindo reto, ao final do corredor, ap├│s os \r\nbanheiros, temos a biblioteca. A entrada se da \r\npor uma porta de vidro.','Bibliotecarios','Biblioteca','Local dedicado a estudo e leitura',1,'1┬░ bloco','Aberto a todos os alunos ','');
+INSERT INTO `locais` VALUES (9,'Ap├│s entrar pela porta de vidro na entrada, \r\nchegamos ao hall. O hall ├⌐ relativamente \r\nmuito espa├ºoso. Na parede direita, logo na \r\nentrada temos a recep├º├úo, mais a frente \r\nainda na parede direita, h├í bancos e uma \r\nmesinha, a frente a direita temos uma entrada \r\nque permite acesso a outros locais do ifc. Mais \r\na frente ainda na  parede direita temos v├írios \r\narm├írios que os \r\nestudantes utilizam para guardar seus \r\nmateriais. Na parede esquerda, h├í mais \r\narm├írios e tamb├⌐m um pouco distante da \r\nparede temos outra mesinha. Mais a frente \r\nna parede dos fundos, cujo se encontra \r\npr├│ximo a ├írea do gr├¬mio estudantil temos \r\npufs de bancos pros alunos sentarem.','Todos os professores e servidores frequentam \r\nesse local.','Hall','Receber os alunos que entram no campus do ifc-cas',1,'1┬░ bloco','Todos os discentes frequentam esse local.','Primeiro local ao entrar no ifc-cas.');
 /*!40000 ALTER TABLE `locais` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +86,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `nome` (`nome`),
   UNIQUE KEY `user` (`user`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +95,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES ('Marcos dos Santos Luiz','marcos','marcodossantosluiz111@gmail.com','$2y$10$1j0K4rwWVtApbfSdADPbR.TD9njaePyC.ijb2S2KlMbt2R6WKdeP2',14,1);
+INSERT INTO `usuario` VALUES ('Marcos dos Santos Luiz','marcola','marcodossantosluiz@gmail.com','$2y$10$xajfcEU9UTV9.Db2kX3UoucLBRnxVlBGxYrzjpCxQ6gY/SfB3tL02',28,1),('','marcolaaaaaaaa','m@gmail.com','$2y$10$tVoAY1sLzmkarDsq2gajN.2mzHhLqaFseq3KzEI49M32uINAGmjai',29,1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +111,7 @@ CREATE TABLE `usuarioimagem` (
   `userimagem` varchar(200) NOT NULL DEFAULT '../assets/images/userimg.png',
   `iduser` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +120,7 @@ CREATE TABLE `usuarioimagem` (
 
 LOCK TABLES `usuarioimagem` WRITE;
 /*!40000 ALTER TABLE `usuarioimagem` DISABLE KEYS */;
-INSERT INTO `usuarioimagem` VALUES (19,'/assets/images/userimg/user-img-14.jpeg',14),(20,'/assets/images/userimg/user-img-14.jpeg',14),(21,'/assets/images/userimg/user-img-14.jpeg',14),(22,'/assets/images/userimg/user-img-14.jpeg',14),(23,'/assets/images/userimg/user-img-14.jpeg',14);
+INSERT INTO `usuarioimagem` VALUES (32,'user-img-28.png',28);
 /*!40000 ALTER TABLE `usuarioimagem` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -135,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-17 20:23:16
+-- Dump completed on 2022-10-19 23:09:02

@@ -39,9 +39,9 @@ if ($id) {
         <div class="geral">
             <a class="back-button btn btn-dark" href="andares.php">Voltar</a>
         </div>
-        <div class="botoes">
+        <div class="locais-area">
             <?php foreach ($local as $lugar) : ?>
-                <a class="local-button btn btn-success btn-md btn-block" href="local.php?id=<?= $lugar['id']; ?>"><?= $lugar['nome'] ?></a>
+                <a class="local-button btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $lugar['id']; ?>"><?= $lugar['nome'] ?></a>
             <?php endforeach; ?>
         </div>
     </div>

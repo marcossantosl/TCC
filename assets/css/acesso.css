@@ -19,6 +19,7 @@
 }
 
 .buttons {
+    text-transform: uppercase;
     max-width: 200px;
     width: 50%;
     background-color: black;
@@ -43,6 +44,7 @@
 }
 
 .buttonss {
+    text-transform: uppercase;
     max-width: 200px;
     width: 50%;
     background-color: rgb(255, 255, 255);

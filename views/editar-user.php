@@ -65,9 +65,8 @@ require('header.php');
                     <i class="fa fa-lock"></i>
                     <input type="password" name="rpassword" placeholder="repita a senha">
                 </div>
-                <div class="input">
-                    <i class="fa-light fa-folder"></i>
-                    <input type="file" name="fotouser" />
+                <div class="input-file">
+                    <input type="file" class="fotouser" name="fotouser" />
                 </div>
                 <!-- onclick="(()=>{ -->
                 <!-- if(confirm('Deseja mesmo sair'))location.href='../php/logout.php'; -->

@@ -53,16 +53,16 @@ require('header.php');
                         </select>
                     </div>
                     <div class="form-floating w-100">
-                        <textarea class="form-control" cols=40 rows="5" name="descricao" maxlength="300" wrap="hard" placeholder="Descrição física do ambiente, de preferência detalhada, como posição das mesas e demais objetos presentes no local"></textarea>
+                        <textarea class="form-control" cols=40 rows="5" name="descricao" maxlength="1000" wrap="hard" placeholder="Descrição física do ambiente, de preferência detalhada, como posição das mesas e demais objetos presentes no local"></textarea>
                     </div>
                     <div class="form-floating w-100">
-                        <textarea class="form-control" cols=40 rows="5" name="rota" maxlength="300" wrap="hard" placeholder="Modo de chegar, pontos de referências, e distância aproximada em metros e passos"></textarea>
+                        <textarea class="form-control" cols=40 rows="5" name="rota" maxlength="1000" wrap="hard" placeholder="Modo de chegar, pontos de referências, e distância aproximada em metros e passos"></textarea>
                     </div>
                     <div class="form-floating w-100">
-                        <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="300" wrap="hard" placeholder="Funcionários ou professores que frequentam o local"></textarea>
+                        <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="1000" wrap="hard" placeholder="Funcionários ou professores que frequentam o local"></textarea>
                     </div>
                     <div class="form-floating w-100">
-                        <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="300" wrap="hard" placeholder="Discentes que frequentam o local"></textarea>
+                        <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="1000" wrap="hard" placeholder="Discentes que frequentam o local"></textarea>
                     </div>
                     <br>
                     <div class="button">

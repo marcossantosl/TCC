@@ -73,13 +73,8 @@ if ($id) {
                     <i class="fa fa-lock"></i>
                     <input type="password" name="rpassword" placeholder="repita a senha">
                 </div>
-
-                <!-- onclick="(()=>{ -->
-                <!-- if(confirm('Deseja mesmo sair'))location.href='../php/logout.php'; -->
-                <!-- })()" -->
                 <div class="buttons-area">
                     <input class="buttons-user" type="submit" value="Salvar">
-                    <button class="buttonss-user" href="../php/admin-deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</button>
                 </div>
             </form>
         </div>

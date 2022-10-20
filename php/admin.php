@@ -10,7 +10,7 @@ if ($id) {
         $sql = $pdo->prepare("UPDATE usuario SET admuser = 1 where id = :id");
         $sql->bindValue(':id', $id);
         $sql->execute();
-        header('Location: ../views/admin-definir-admins.php');
+        header('Location: ../views/painel-adm.php');
         exit;
     } else {
         $sql = $pdo->prepare("UPDATE usuario SET admuser = 0 where id = :id");

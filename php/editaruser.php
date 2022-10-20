@@ -85,7 +85,7 @@ if ($id & $nome & $email & $user & $senha_criptografada) {
     $sql->bindValue(':senha', $senha_criptografada);
     $sql->execute();
     $_SESSION['updateuser'] = 'Dados do usuário atualizado com sucesso';
-    header('Location: ../views/login.php');
+    header('Location: ../views/home.php');
     exit;
 } else {
     header("location:  ../views/editar-user.php?id=" . $id);

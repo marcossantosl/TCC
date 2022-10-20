@@ -54,12 +54,10 @@
                                     <a class="nav-link active" href="painel-adm.php">Editar administradores</a>
                                 </li>
                             <?php }; ?>
-                        </ul>
-                </nav>
-                <!-- aside do usuário -->
-                <aside>
+                            <li class="nav-item">
+                            <aside>
                     <div id='menu-opener'>
-                        <img onclick="menuTogle()" class="img-fluid nav-home-image" src="../assets/images/user.svg" />
+                        <img onclick="menuTogle()" class="img-fluid nav-home-image rounded-circle"  src="../assets/images/<?= isset($photo) ? "userimg/" . $photo : 'user.svg'; ?>"/>
                     </div>
                     <div id="menu-area">
                         <div class="user-area">
@@ -111,6 +109,11 @@
                                     <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
                             </div>
                 </aside>
+                            </li>
+                        </ul>
+                </nav>
+                <!-- aside do usuário -->
+            
             </div>
         </div>
     </header>
@@ -120,6 +123,12 @@
 
 
     <div class="container">
+       <p class="session"> <?php
+        if   (isset ($_SESSION['updateuser'])) {
+            echo $_SESSION['updateuser'];
+            $_SESSION['updateuser'] = "";
+        } 
+        ?> </p>
         <main class="principal-area">
             <div class="locais">
                 <img class="locaisImg" onclick="window.location.href = 'andares.php'" src="../assets/images/locais.svg">

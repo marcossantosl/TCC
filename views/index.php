@@ -1,3 +1,9 @@
+<?php
+require('../php/config.php');
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,12 +32,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="login.php">login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cadastro.php">cadastro</a>
-              </li>
+
+              <?php var_dump($_SESSION['id']); if (isset($_SESSION['id']) != false) { ?>
+                <li class="nav-item">
+                  <a class="nav-link active" href="home.php">home</a>
+                </li>
+              <?php } else { ?>
+                <li class="nav-item">
+                  <a class="nav-link active" href="login.php">login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.php">cadastro</a>
+                </li>
+              <?php }; ?>
               <li class="nav-item">
                 <a class="nav-link" href="#">sobre</a>
               </li>
