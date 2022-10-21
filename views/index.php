@@ -1,7 +1,9 @@
 <?php
 require('../php/config.php');
 session_start();
-
+if (!isset($_SESSION['id'])) {
+  $_SESSION['id'] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +35,7 @@ session_start();
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
 
-              <?php var_dump($_SESSION['id']); if (isset($_SESSION['id']) != false) { ?>
+              <?php if ($_SESSION['id'] !== false) { ?>
                 <li class="nav-item">
                   <a class="nav-link active" href="home.php">home</a>
                 </li>

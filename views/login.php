@@ -1,5 +1,10 @@
 <?php
-require("../php/config.php")
+require("../php/config.php");
+session_start();
+if ($_SESSION['id']) {
+    header('location: index.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,23 +35,26 @@ require("../php/config.php")
         </div>
         <div id="right-login">
             <div class="card-login">
+                <p class="session-acesso">
+                    <?php
+
+                    if (isset($_SESSION['avisoLogin!'])) {
+                        echo $_SESSION['avisoLogin!'];
+                        $_SESSION['avisoLogin!'] = '';
+                    }
+                    if (isset($_SESSION['logout'])) {
+                        echo $_SESSION['logout'];
+                        $_SESSION['logout'] = '';
+                    }
+
+                    if (isset($_SESSION['senha!'])) {
+                        echo $_SESSION['senha!'];
+                        $_SESSION['senha!'] = '';
+                    }
+
+                    ?>
+                </p>
                 <h2 class="title">Entre</h2>
-
-                <?php
-                session_start();
-
-                if (isset($_SESSION['avisoLogin!'])) {
-                    echo $_SESSION['avisoLogin!'];
-                    $_SESSION['avisoLogin!'] = '';
-                }
-
-                if (isset($_SESSION['senha!'])) {
-                    echo $_SESSION['senha!'];
-                    $_SESSION['senha!'] = '';
-                }
-
-                ?>
-
                 <form method="POST" action="../php/recebeLogin.php">
                     <div class="input">
                         <i class="fa-regular fa-user"></i>

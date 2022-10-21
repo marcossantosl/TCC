@@ -93,3 +93,9 @@
     font-size: 1.2em;
     padding: 5px;
 }
+
+.session-acesso {
+    text-transform: uppercase;
+    color: red;
+    font-weight: 500;
+}

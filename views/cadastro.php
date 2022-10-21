@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-
 <?php
 require("../php/config.php");
+session_start();
+if ($_SESSION['id']) {
+    header('location: index.php');
+    exit;
+}
 ?>
-
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -35,26 +38,25 @@ require("../php/config.php");
         </div>
 
         <div>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['aviso!'])) {
+                    echo $_SESSION['aviso!'];
+                    $_SESSION['aviso!'] = '';
+                }
+
+                if (isset($_SESSION['avisoSenha!'])) {
+                    echo $_SESSION['avisoSenha!'];
+                    $_SESSION['avisoSenha!'] = '';
+                }
+
+                if (isset($_SESSION['avisoUser!'])) {
+                    echo $_SESSION['avisoUser!'];
+                    $_SESSION['avisoUser!'] = '';
+                }
+                ?>
+            </p>
             <h2> Crie sua conta </h2>
-            <?php
-            session_start();
-
-            if (isset($_SESSION['aviso!'])) {
-                echo $_SESSION['aviso!'];
-                $_SESSION['aviso!'] = '';
-            }
-
-            if (isset($_SESSION['avisoSenha!'])) {
-                echo $_SESSION['avisoSenha!'];
-                $_SESSION['avisoSenha!'] = '';
-            }
-
-            if (isset($_SESSION['avisoUser!'])) {
-                echo $_SESSION['avisoUser!'];
-                $_SESSION['avisoUser!'] = '';
-            }
-            ?>
-
             <form method="POST" action="../php/recebecadastro.php">
                 <div class="formCad">
                     <div class="input">

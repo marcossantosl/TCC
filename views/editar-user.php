@@ -20,24 +20,55 @@ require('header.php');
     <a class="back-button btn btn-dark" href="home.php">Voltar</a>
     <div class="containerForm">
         <div class="editar-area">
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['avisoSenha'])) {
+                    echo $_SESSION['avisoSenha'];
+                    $_SESSION['avisoSenha'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['aviso'])) {
+                    echo $_SESSION['aviso'];
+                    $_SESSION['aviso'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['tamanhoSenha'])) {
+                    echo $_SESSION['tamanhoSenha'];
+                    $_SESSION['tamanhoSenha'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['senhaVazio'])) {
+                    echo $_SESSION['senhaVazio'];
+                    $_SESSION['senhaVazio'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['extensao'])) {
+                    echo $_SESSION['extensao'];
+                    $_SESSION['extensao'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['maxSizeImg'])) {
+                    echo $_SESSION['maxSizeImg'];
+                    $_SESSION['maxSizeImg'] = "";
+                }
+                ?>
+            </p>
             <h2>Editar usuário</h2>
-            <?php
-
-            if (isset($_SESSION['avisoSenha'])) {
-                echo $_SESSION['avisoSenha'];
-                $_SESSION['avisoSenha'] = "";
-            }
-
-            if (isset($_SESSION['tamanhoSenha'])) {
-                echo $_SESSION['tamanhoSenha'];
-                $_SESSION['tamanhoSenha'] = "";
-            }
-
-            if (isset($_SESSION['senhaVazio'])) {
-                echo $_SESSION['senhaVazio'];
-                $_SESSION['senhaVazio'] = "";
-            }
-            ?>
             <form method='POST' action='../php/editaruser.php' enctype="multipart/form-data">
 
                 <input type="hidden" name="id" value="<?= $info['id']; ?>">

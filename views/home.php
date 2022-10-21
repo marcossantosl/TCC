@@ -55,65 +55,65 @@
                                 </li>
                             <?php }; ?>
                             <li class="nav-item">
-                            <aside>
-                    <div id='menu-opener'>
-                        <img onclick="menuTogle()" class="img-fluid nav-home-image rounded-circle"  src="../assets/images/<?= isset($photo) ? "userimg/" . $photo : 'user.svg'; ?>"/>
-                    </div>
-                    <div id="menu-area">
-                        <div class="user-area">
-                            <div class="welcome">
-                                <p>
-                                    <?php
-                                    if (isset($info['nome'])) {
-                                        echo "<b>Seja bem vindo " . $info['nome'] . "</b>";
-                                    }
-                                    ?>
-                                </p>
-                                <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
-                            </div>
-                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
-                            <div class=" dados-user">
-                                <label> Nome: </label>
-                                <p>
-                                    <?php
-                                    if (isset($info['nome'])) {
-                                        echo $info['nome'];
-                                    }
-                                    ?>
-                                </p>
-                                <label> Usuário: </label>
-                                <p>
-                                    <?php
-                                    if (isset($info['user'])) {
-                                        echo $info['user'];
-                                    }
-                                    ?>
-                                </p>
-                                <label> Email: </label>
-                                <p>
-                                    <?php
-                                    if (isset($info['email'])) {
-                                        echo $info['email'];
-                                    }
-                                    ?>
-                                </p>
-                            </div>
-                            <div class="buttons-area">
-                                <button onclick="window.location.href  = 'editar-user.php '" class="button-aside btn btn-lg btn-primary">Editar perfil</button>
-                                <button class="button-aside btn btn-lg btn-warning" onclick="(()=>{
+                                <aside>
+                                    <div id='menu-opener'>
+                                        <img onclick="menuTogle()" class="img-fluid nav-home-image rounded-circle" src="../assets/images/<?= isset($photo) ? "userimg/" . $photo : 'user.svg'; ?>" />
+                                    </div>
+                                    <div id="menu-area">
+                                        <div class="user-area">
+                                            <div class="welcome">
+                                                <p>
+                                                    <?php
+                                                    if (isset($info['nome'])) {
+                                                        echo "<b>Seja bem vindo " . $info['nome'] . "</b>";
+                                                    }
+                                                    ?>
+                                                </p>
+                                                <img class="user-img" src="../assets/images/notification.svg" class="img-fluid nav-home-image">
+                                            </div>
+                                            <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
+                                            <div class=" dados-user">
+                                                <label> Nome: </label>
+                                                <p>
+                                                    <?php
+                                                    if (isset($info['nome'])) {
+                                                        echo $info['nome'];
+                                                    }
+                                                    ?>
+                                                </p>
+                                                <label> Usuário: </label>
+                                                <p>
+                                                    <?php
+                                                    if (isset($info['user'])) {
+                                                        echo $info['user'];
+                                                    }
+                                                    ?>
+                                                </p>
+                                                <label> Email: </label>
+                                                <p>
+                                                    <?php
+                                                    if (isset($info['email'])) {
+                                                        echo $info['email'];
+                                                    }
+                                                    ?>
+                                                </p>
+                                            </div>
+                                            <div class="buttons-area">
+                                                <button onclick="window.location.href  = 'editar-user.php '" class="button-aside btn btn-lg btn-primary">Editar perfil</button>
+                                                <button class="button-aside btn btn-lg btn-warning" onclick="(()=>{
                             if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                         })()">Sair</button>
-                            </div>
-                            <div class="user-delete">
-                                <i" aria-hidden="true"></i>
-                                    <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
-                            </div>
-                </aside>
+                                            </div>
+                                            <div class="user-delete">
+                                                <i" aria-hidden="true"></i>
+                                                    <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
+                                            </div>
+                                </aside>
                             </li>
                         </ul>
                 </nav>
                 <!-- aside do usuário -->
-            
+
             </div>
         </div>
     </header>
@@ -123,12 +123,22 @@
 
 
     <div class="container">
-       <p class="session"> <?php
-        if   (isset ($_SESSION['updateuser'])) {
-            echo $_SESSION['updateuser'];
-            $_SESSION['updateuser'] = "";
-        } 
-        ?> </p>
+        <p class="session-acesso">
+            <?php
+            if (isset($_SESSION['updateuser'])) {
+                echo $_SESSION['updateuser'];
+                $_SESSION['updateuser'] = "";
+            }
+            ?>
+        </p>
+        <p class="session-acesso">
+            <?php
+            if (isset($_SESSION['errorImg'])) {
+                echo $_SESSION['errorImg'];
+                $_SESSION['errorImg'] = "";
+            }
+            ?>
+        </p>
         <main class="principal-area">
             <div class="locais">
                 <img class="locaisImg" onclick="window.location.href = 'andares.php'" src="../assets/images/locais.svg">

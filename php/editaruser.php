@@ -14,21 +14,20 @@ $fotouser = $_FILES["fotouser"];
 
 if ($senha !== "" and $rsenha !== "") {
     if ($senha !== $rsenha) {
-        $_SESSION['avisoSenha'] = "<b><font color='red'> Senhas não coincidem </font></b>";
+        $_SESSION['avisoSenha'] = "Senhas não coincidem";
         header("location:  ../views/editar-user.php?id=" . $id);
         exit;
     }
     if (strlen($senha) < 8) {
-        $_SESSION['tamanhoSenha'] = "<b><font color='red'> Sua senha deve conter no mínimo 8 caracteres </font></b>";
+        $_SESSION['tamanhoSenha'] = "Sua senha deve conter no mínimo 8 caracteres";
         header("location:  ../views/editar-user.php?id=" . $id);
         exit;
     };
 } else {
-    $_SESSION['senhaVazio'] = "<b><font color='red'> Por favor, preencha os campos de senha</font></b>";
+    $_SESSION['senhaVazio'] = "Por favor, preencha os campos de senha";
     header("location:  ../views/editar-user.php?id=" . $id);
     exit;
 }
-
 
 if (isset($fotouser)) {
 
@@ -76,6 +75,7 @@ if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png'))) 
     header("location:  ../views/editar-user.php?id=" . $id);
 };
 
+
 if ($id & $nome & $email & $user & $senha_criptografada) {
     $sql = $pdo->prepare("UPDATE usuario SET nome = :nome, email = :email, user = :user, senha = :senha WHERE id = :id"); //query que faz uma atualização nos valores
     $sql->bindValue(':nome', $nome);
@@ -84,10 +84,12 @@ if ($id & $nome & $email & $user & $senha_criptografada) {
     $sql->bindValue(':id', $id);
     $sql->bindValue(':senha', $senha_criptografada);
     $sql->execute();
+
     $_SESSION['updateuser'] = 'Dados do usuário atualizado com sucesso';
     header('Location: ../views/home.php');
     exit;
 } else {
+    $_SESSION['aviso'] = "Verifique seus campos";
     header("location:  ../views/editar-user.php?id=" . $id);
     exit;
 };
