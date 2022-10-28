@@ -1,4 +1,4 @@
-/* MAX MEDIUM */
+/* INDEX */
 @media (max-width: 991.98px) {
     #header .navbar-collapse {
         width: 100%;
@@ -19,5 +19,156 @@
     #contato ul {
         padding-top: 30px;
         justify-content: center;
+    }
+}
+
+/* ANDARES  */
+
+@media (max-width: 995px) {
+
+    div.botoes {
+        margin: 50px 0px 0px 0px;
+        padding: 0px;
+        width: 550px;
+    }
+
+    div.areas {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    div.video {
+        margin: 50px 0px 0px 0px;
+        border-left: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 590px) {
+
+    div.botoes {
+        width: 90%
+    }
+
+    .areas iframe {
+        width: 400px!important;
+
+    }
+}
+
+@media (max-width: 420px) {
+
+    .areas iframe {
+        width: 300px!important;
+
+    }
+}
+
+/* ACESSO */
+
+@media (max-width: 730px) {
+
+    .containerAcesso {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+    }
+}
+
+/* USER AREA */
+
+@media (max-width: 490px) {
+ 
+
+
+    .welcome p {
+        font-size: 0.9rem !IMPORTANT;
+        margin-bottom: 0px;
+    }
+    .button-aside {
+        font-size: 0.9rem !IMPORTANT;
+    }
+
+    .user-area {
+        padding: 20px 20px 20px 20px !important;
+        width: 600px;
+    }
+
+    .dados-user label {
+        font-size: 0.9rem !important;
+
+    }
+
+    .dados-user p {
+        font-size: 0.9rem;
+    }
+
+    .img-user {
+        margin: 20px 0px 20px 0px!important;
+        max-height: 150px!important;
+        max-width: 150px!important;
+        max-height: 150px!important;
+    }
+    #menu-area {
+         border-radius: 20px!important;
+        height: 650px!important;
+    }
+}
+
+
+/* LOCAL */
+
+@media (max-width: 1220px) {
+    .desc-local { 
+        width: 65%!important;
+        
+    }
+}
+
+@media (max-width: 900px) {
+    .desc-local { 
+        width: 80%!important;
+        
+    }
+}
+@media (max-width: 755px) {
+    .desc-local { 
+        padding: 10px!important;
+        width: 100%!important;
+        
+    }
+
+    p.descricao {
+        padding: 0px 5px 0px 5px!important;
+    }
+}
+
+@media (max-width: 529px) {
+    .desc-local { 
+        padding: 10px!important;
+        width: 100%!important;
+        border-radius: 25px!important;
+    }
+
+    p.descricao {
+        padding: 0px 5px 0px 5px!important;
+    }
+
+    .desc-local h1 {
+        font-size: 52px!important;
+        margin-bottom: 20px!important;
+    }
+    .desc-local p {
+        font-size: 15px!important;
+    }
+    .desc-local h3 {
+        font-size: 25px!important;
     }
 }

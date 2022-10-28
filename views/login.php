@@ -28,7 +28,7 @@ if ($_SESSION['id']) {
     <!-- LOGIN -->
     <div class="container containerAcesso">
         <div class="left-login">
-            <h2> Crie um novo cadastro </h2>
+            <h2>cadastre-se </h2>
             <p>Cadastre-se no site para ter acesso as funcionalidades</p>
             <input type="button" class="buttons" onclick="location.href='cadastro.php';" value="Cadastre-se" />
 
@@ -38,18 +38,22 @@ if ($_SESSION['id']) {
                 <p class="session-acesso">
                     <?php
 
-                    if (isset($_SESSION['avisoLogin!'])) {
-                        echo $_SESSION['avisoLogin!'];
-                        $_SESSION['avisoLogin!'] = '';
+                    if (isset($_SESSION['avisoLogin'])) {
+                        echo $_SESSION['avisoLogin'];
+                        $_SESSION['avisoLogin'] = '';
                     }
                     if (isset($_SESSION['logout'])) {
                         echo $_SESSION['logout'];
                         $_SESSION['logout'] = '';
                     }
 
-                    if (isset($_SESSION['senha!'])) {
-                        echo $_SESSION['senha!'];
-                        $_SESSION['senha!'] = '';
+                    if (isset($_SESSION['senha'])) {
+                        echo $_SESSION['senha'];
+                        $_SESSION['senha'] = '';
+                    }
+                    if (isset($_SESSION['aviso'])) {
+                        echo $_SESSION['aviso'];
+                        $_SESSION['aviso'] = '';
                     }
 
                     ?>

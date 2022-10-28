@@ -2,6 +2,10 @@
 require('../php/config.php');
 require('../php/getusers.php');
 require('header.php');
+if ($_SESSION['id'] === false) {
+    header('Location: ../views/login.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,13 +30,13 @@ require('header.php');
             <div class="areas">
                 <div class="botoes">
                     <?php foreach ($andares as $andar) : ?>
-                        <div>
-                            <a class="local-button btn btn-outline-dark btn-lg btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
+                        <div class="d-grid">
+                            <a class="local-button btn btn-outline-dark btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
                         </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="video">
-                    <h2> Tour geral IFC-CAS </h2>
+                    <h2> ÁUdio Tour geral IFC-CAS </h2>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/3HHmFCB9XVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>

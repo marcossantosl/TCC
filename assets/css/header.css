@@ -3,8 +3,9 @@
     background-color: transparent;
 }
 
-.navbar {
-    justify-content: space-between;
+nav.navbar {
+    display: flex;
+    justify-content: space-between!important;
 }
 
 #header .container {

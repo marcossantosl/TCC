@@ -22,3 +22,8 @@ html {
 table th {
   text-transform: uppercase;
 }
+
+.nav-button {
+  font-size: 20px;
+  text-transform: uppercase;
+ }

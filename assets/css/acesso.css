@@ -10,7 +10,6 @@
 .containerForm {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .container h2 {
@@ -20,15 +19,12 @@
 
 .buttons {
     text-transform: uppercase;
-    max-width: 200px;
-    width: 50%;
     background-color: black;
-    border-radius: 28px;
-    display: inline-block;
-    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
     color: white;
-    font-size: 15px;
-    padding: 5px 30px;
+    font-size: 14px !important;
+    padding: 5px 20px;
     text-decoration: none;
     font-size: 1.2em;
     outline: none;
@@ -43,35 +39,8 @@
     top: 1px;
 }
 
-.buttonss {
-    text-transform: uppercase;
-    max-width: 200px;
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 28px;
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    outline: none;
-    border: 1px solid black;
-}
-
-.buttonss:hover {
-    background-color: #f7f4f4;
-}
-
-.buttonss:active {
-    position: relative;
-    top: 1px;
-}
-
-
 .input {
-    min-width: 280px;
+    max-width: 311px;
     border-radius: 22px;
     border: 2px #0c0c0c solid;
     padding: 5px;

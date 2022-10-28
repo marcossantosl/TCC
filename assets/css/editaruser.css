@@ -1,14 +1,11 @@
 .buttons-user {
     text-transform: uppercase;
-    max-width: 130px;
-    width: 50%;
     background-color: black;
-    border-radius: 28px;
-    display: inline-block;
-    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
     color: white;
-    font-size: 15px;
-    padding: 5px 30px;
+    font-size: 18px !important;
+    padding: 5px 20px;
     text-decoration: none;
     font-size: 1.2em;
     outline: none;
@@ -23,28 +20,3 @@
     top: 1px;
 }
 
-.buttonss-user {
-    text-transform: uppercase;
-    max-width: 130px;
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 28px;
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    outline: none;
-    border: 1px solid black;
-}
-
-.buttonss-user:hover {
-    background-color: #f7f4f4;
-}
-
-.buttonss-user:active {
-    position: relative;
-    top: 1px;
-}

@@ -1,0 +1,47 @@
+.geral-local {
+    display: flex;
+    justify-content: center;
+}
+
+.desc-local { 
+    padding: 15px;
+    width: 60%;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 40px;
+    background-color: #ddd;
+    text-transform: uppercase;
+}
+
+
+.desc-local h1 {
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 25px;
+    
+}
+
+.desc-local p {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 0px 35px 0px 35px;
+}
+
+
+.desc-local p:last-child {
+    margin-bottom: 10px;
+    padding: 0px 20px 0px 20px;
+}
+
+.desc-local .descricao-local {
+    font-size: 22px;
+}
+
+.desc-local h3 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+}

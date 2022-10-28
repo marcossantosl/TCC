@@ -33,6 +33,7 @@ if (isset($fotouser)) {
 
     if ($fotouser['error']) {
         $_SESSION['errorImg'] = "Falha ao enviar imagem";
+        exit;
     }
 
     if ($fotouser['size'] > 2097152) {
@@ -73,6 +74,7 @@ if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png'))) 
 } else {
     $_SESSION['extensao'] = "Extensão não permitida";
     header("location:  ../views/editar-user.php?id=" . $id);
+    exit;
 };
 
 

@@ -68,6 +68,14 @@ require('header.php');
                 }
                 ?>
             </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['errorImg'])) {
+                    echo $_SESSION['errorImg'];
+                    $_SESSION['errorImg'] = "";
+                }
+                ?>
+            </p>
             <h2>Editar usuário</h2>
             <form method='POST' action='../php/editaruser.php' enctype="multipart/form-data">
 

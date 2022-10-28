@@ -46,7 +46,39 @@ if ($id) {
 
     <div class="containerForm">
         <div class="editar-area">
-            <form method='POST' action='../php/editaruser.php'>
+        <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['avisoSenha'])) {
+                    echo $_SESSION['avisoSenha'];
+                    $_SESSION['avisoSenha'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['aviso'])) {
+                    echo $_SESSION['aviso'];
+                    $_SESSION['aviso'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['tamanhoSenha'])) {
+                    echo $_SESSION['tamanhoSenha'];
+                    $_SESSION['tamanhoSenha'] = "";
+                }
+                ?>
+            </p>
+            <p class="session-acesso">
+                <?php
+                if (isset($_SESSION['senhaVazio'])) {
+                    echo $_SESSION['senhaVazio'];
+                    $_SESSION['senhaVazio'] = "";
+                }
+                ?>
+            </p>
+            <form method='POST' action='../php/admin-editaruser.php'>
                 <h2>Editar usuário</h2>
                 <input type="hidden" name="id" value="<?= $info['id']; ?>">
                 <div class="input">

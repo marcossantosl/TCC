@@ -2,6 +2,10 @@
 require('../php/config.php');
 require('../php/getusers.php');
 require('header.php');
+if ($_SESSION['id'] === false) {
+    header('Location: ../views/login.php');
+    exit;
+}
 
 $id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
 $local = [];
@@ -38,25 +42,31 @@ if ($id) {
 <body>
     <div class="container">
         <a class="back-button btn btn-dark" href="locais.php?id=<?= $local['idandar'] ?>">Voltar</a>
+        <div class="geral-local">
+            <div class="desc-local">
+                <div>
+                    <h1 class="titulo"><?= $local['nome']; ?></h1>
+                    <p class="descricao-local">Localizado no <?= $local['andar']; ?> e no/na <?= $local['bloco']; ?></p>
+                    <h3 class="titulo">Como chegar</h3>
+                    <p class="descricao-rota"><?= $local['rota']; ?> </p>
 
-        <h1 class="local-titulo"><?= $local['nome']; ?></h1>
-        <p class="regiao">Localizado no <?= $local['andar']; ?> e no/na <?= $local['bloco']; ?></p>
+                    <h3 class="titulo">Descrição</h3>
+                    <p class="descricao"><?= $local['descricaofisica']; ?></p>
 
-        <h3 class="titulo">Como chegar</h3>
-        <p class="descricao-rota"><?= $local['rota']; ?> </p>
+                    <h3 class="titulo">Função</h3>
+                    <p class="descricao"><?= $local['funcao']; ?></p>
 
-        <h3 class="titulo">Descrição</h3>
-        <p class="descricao"><?= $local['descricaofisica']; ?></p>
 
-        <h3 class="titulo">Função</h3>
-        <p class="descricao"><?= $local['funcao']; ?></p>
+                    <h3 class="titulo">Funcionários e professores que frequentam o local</h3>
+                    <p class="descricao"><?= $local['funcionarios']; ?></p>
 
-        <h3 class="titulo">Funcionários e professores que frequentam o local</h3>
-        <p class="descricao"><?= $local['funcionarios']; ?></p>
 
-        <h3 class="titulo">Alunos que frequentam o local</h3>
-        <p class="descricao"><?= $local['alunos']; ?></p>
+                    <h3 class="titulo">Alunos que frequentam o local</h3>
+                    <p class="descricao"><?= $local['alunos']; ?></p>
+                </div>
+            </div>
 
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
