@@ -25,12 +25,12 @@
                         </a>
 
                         <button alt="menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <!-- verificação de adm -->
-                                <?php 
+                                <?php
                                 if (isset($_SESSION['id']) === false) {
                                     header('Location: ../views/login.php');
                                     exit;
@@ -38,13 +38,7 @@
 
                                 if ($info['admuser'] == 1) { ?>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="painel-locais.php">Painel locais</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="painel-users.php">Editar usuários</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="painel-adm.php">Editar administradores</a>
+                                        <a type="button" href="gerenciarpaineis.php" class="nav-button btn btn-outline-info btn-lg">PAINEL DE ADMINISTRAÇÃO</a>
                                     </li>
                                 <?php }; ?>
                             </ul>

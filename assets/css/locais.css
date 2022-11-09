@@ -26,6 +26,41 @@
     text-transform: uppercase;
 }
 
+
+.local-button-locais {
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.geral-locais {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-area {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-area form{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 65%;
+}
+.search-area form input{
+margin-right: 15px;
+} 
+
 .locais-area {
-    width: 100px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.locais-area div {
+    width: 45%;
 }

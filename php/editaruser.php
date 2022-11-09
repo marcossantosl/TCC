@@ -33,7 +33,6 @@ if (isset($fotouser)) {
 
     if ($fotouser['error']) {
         $_SESSION['errorImg'] = "Falha ao enviar imagem";
-        exit;
     }
 
     if ($fotouser['size'] > 2097152) {
@@ -42,8 +41,7 @@ if (isset($fotouser)) {
         exit;
     };
 }
-
-if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png'))) {
+if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/bmp', 'image/tiff', 'image/svg'))) {
     $name = 'user-img-' . $id;
     $imgname = $name . '.' . explode('/', $fotouser['type'])[1];
     move_uploaded_file($fotouser['tmp_name'], '../assets/images/userimg/' . $imgname); //selecionando o lugar de onde o arquivo é movido temporariamente, e o movendo depois para a pasta arquivos 

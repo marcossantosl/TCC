@@ -28,7 +28,7 @@ if ($info['admuser'] == 0) {
     <div class="container">
 
         <div class="buttons-ares">
-            <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+            <a class="back-button btn btn-dark" href="gerenciarpaineis.php">Voltar</a>
             <a class="back-button btn btn-success" href="cadastro-local.php">Cadastrar local</a>
         </div>
         <table class="table table-responsive table-hover ">

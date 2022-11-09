@@ -36,8 +36,8 @@ if ($_SESSION['id'] === false) {
                     <?php endforeach; ?>
                 </div>
                 <div class="video">
-                    <h2> ÁUdio Tour geral IFC-CAS </h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3HHmFCB9XVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h2>Tour geral IFC-CAS </h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sk5dbRj4Jtk" title="Conhecendo o IFC - Campus Avançado Sombrio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

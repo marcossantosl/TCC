@@ -26,7 +26,7 @@ if ($info['admuser'] == 0) {
 
 <body>
   <div class="container">
-    <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+    <a class="back-button btn btn-dark" href="gerenciarpaineis.php">Voltar</a>
     <table class="table table-responsive table-hover ">
       <thead>
         <tr>

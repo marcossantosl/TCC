@@ -7,8 +7,11 @@ if ($_SESSION['id'] === false) {
     exit;
 }
 
-$id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
+if (isset($_SESSION['search']) == true) {
+    $resultados = $_SESSION['search'];
+}
 
+$id = filter_input(INPUT_GET, 'id', FILTER_DEFAULT);
 $local = [];
 
 if ($id) {
@@ -40,13 +43,38 @@ if ($id) {
 
 <body>
     <div class="container">
-        <div class="geral">
+        <div class="geral-locais ">
             <a class="back-button btn btn-dark" href="andares.php">Voltar</a>
+            <div class="search-area">
+                <form method="POST" action="../php/filtersearch.php" class="form-inline my-2 my-lg-0">
+                    <input alt="campo pra inserir pesquisa de local"class="form-control mr-sm-2" name="pesquisar" type="search" placeholder="PESQUISAR" aria-label="Search">
+                    <button alt="botão pesquisar local"class="btn btn-outline-success my-2 my-sm-0" type="submit">ENVIAR</button>
+                </form>
+            </div>
         </div>
+
         <div class="locais-area">
-            <?php foreach ($local as $lugar) : ?>
-                <a class="local-button btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $lugar['id']; ?>"><?= $lugar['nome'] ?></a>
-            <?php endforeach; ?>
+            <div>
+                <?php
+
+                if ($resultados) {
+                    
+                    foreach ($resultados as $result) : ?>
+                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $result['id']; ?>"><?= $result['nome'] ?></a>
+                    <?php endforeach;
+                } else {
+                    foreach ($local as $lugar) : ?>
+                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $lugar['id']; ?>"><?= $lugar['nome'] ?></a>
+                <?php endforeach;;
+                }
+                var_dump($resultados);
+
+                if (isset($_SESSION['search'])) {
+                    $_SESSION['search'] = "";
+                }
+unset($resultados);
+                ?>
+            </div>
         </div>
     </div>
     </div>

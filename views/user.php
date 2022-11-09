@@ -49,6 +49,9 @@ if ($sql->rowCount() > 0) {
                     <div class="imgcenter">
                         <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
                     </div>
+                    <div class="buttons-area">
+                    <a class="button-aside btn btn-danger" href="../php/removerperfil.php" onclick="return confirm('Deseja remover a foto?')">Remover foto</a>
+                        </div>
                     <div class=" dados-user">
                         <label> Nome: </label>
                         <p>

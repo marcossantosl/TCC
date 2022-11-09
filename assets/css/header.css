@@ -3,9 +3,17 @@
     background-color: transparent;
 }
 
-nav.navbar {
+.navbar-collapse {
     display: flex;
-    justify-content: space-between!important;
+    justify-content: flex-end;
+}
+
+.navbar-collapse li {
+    margin-right: 25px;
+}
+
+.navbar-collapse li:last-child {
+    margin-right: 0px;
 }
 
 #header .container {

@@ -7,9 +7,10 @@
     justify-content: space-evenly;
 }
 
-.containerForm {
+.containerform {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .container h2 {
