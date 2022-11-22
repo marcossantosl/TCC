@@ -41,7 +41,6 @@
 }
 
 .input {
-    max-width: 311px;
     border-radius: 22px;
     border: 2px #0c0c0c solid;
     padding: 5px;
@@ -49,10 +48,8 @@
 }
 
 .input input {
-    width: 80%;
     border: none;
     outline: none;
-    transform: translateY(-10%);
     color: #0c0c0c;
     font-size: 11pt;
     background: none;
@@ -67,5 +64,32 @@
 .session-acesso {
     text-transform: uppercase;
     color: red;
+    font-weight: 500;
+}
+
+.containerformMaior {
+    display: flex;
+    justify-content: center;
+}
+
+.editar-area-especial { 
+    width: 55%;
+}
+
+.areas {
+   margin-bottom: 25px;
+}
+
+.select {
+    width: 70%;
+}
+
+.form-control {
+    height: 100%!important;
+}
+
+.editar-area-especial label {
+    font-size: 18px;
+    text-transform: uppercase;
     font-weight: 500;
 }

@@ -5,6 +5,7 @@ if ($_SESSION['id']) {
     header('location: index.php');
     exit;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,7 +14,10 @@ if ($_SESSION['id']) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/main.css" />
 
     <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
@@ -79,17 +83,22 @@ if ($_SESSION['id']) {
                         <i class="fa fa-lock"></i>
                         <input type="password" placeholder="repita a senha" name="rpassword">
                     </div>
-                    </p>
-                    <br>
+                    <div class="select areas">
+                        <label> Você possuí deficiência visual? </label>
+                        <select class="select form-control select2 select2-hidden-accessible" name="deficiencia">
+                            <option value="1">Sim</option>
+                            <option selected value="0">Não</option>
+                        </select>
+                    </div>
                     <div class="button">
                         <input class="buttons" type="submit" value="cadastrar">
                     </div>
                 </div>
             </form>
         </div>
-
     </div>
-    <!-- //CADASTRO -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

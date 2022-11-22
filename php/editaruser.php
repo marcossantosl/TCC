@@ -41,6 +41,7 @@ if (isset($fotouser)) {
         exit;
     };
 }
+
 if (in_array($fotouser['type'], array('image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/bmp', 'image/tiff', 'image/svg'))) {
     $name = 'user-img-' . $id;
     $imgname = $name . '.' . explode('/', $fotouser['type'])[1];

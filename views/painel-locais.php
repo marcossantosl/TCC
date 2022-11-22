@@ -6,6 +6,11 @@ require('header.php');
 if ($info['admuser'] == 0) {
     header('location: home.php');
 }
+
+if ($_SESSION['id'] === false) {
+    header('Location: ../views/login.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

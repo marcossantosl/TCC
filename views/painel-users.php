@@ -6,6 +6,11 @@ require('header.php');
 if ($info['admuser'] == 0) {
   header('location: home.php');
 }
+
+if ($_SESSION['id'] === false) {
+  header('Location: ../views/login.php');
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +39,8 @@ if ($info['admuser'] == 0) {
           <th scope="col">Nome</th>
           <th scope="col">User</th>
           <th scope="col">Email</th>
+          <th scope="col">Possuí deficiência visual?</th>
+          <th scope="col">Observações</th>
           <th scope="col">Ações</th>
         </tr>
       </thead>
@@ -44,6 +51,12 @@ if ($info['admuser'] == 0) {
             <td><?php echo $info['nome']; ?></td>
             <td><?php echo $info['user']; ?></td>
             <td><?php echo $info['email']; ?></td>
+            <td><?php if ($info['defvisual'] == 1) {
+                  echo 'Sim';
+                } else {
+                  echo 'Não';
+                }; ?></td>
+            <td><?php echo $info['obs']; ?></td>
             <td>
               <a class="table-button btn btn-primary" href="adm-editar-users.php?id=<?= $info['id']; ?>">Editar</a>
               <a class="table-button btn btn-danger" href="../php/admin-deleteuser.php?id=<?= $info['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>

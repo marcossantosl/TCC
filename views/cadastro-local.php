@@ -1,6 +1,11 @@
 <?php
 require("../php/getusers.php");
 require('header.php');
+
+if ($_SESSION['id'] === false) {
+    header('Location: ../views/login.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>

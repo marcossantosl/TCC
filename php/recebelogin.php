@@ -28,6 +28,12 @@ if ($sql->rowCount() !== 1) {
 
 $idUser = $userObj['id'];
 
+$sql = $pdo->prepare("INSERT INTO sistema (userid) 
+VALUES (:userid)");
+
+$sql->bindValue(':userid', $idUser);
+$sql->execute();
+
 if (password_verify($senha, $senhaCriptografada)) {
     $_SESSION['id'] = $idUser;
     header('Location: ../views/home.php');

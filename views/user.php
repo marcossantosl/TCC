@@ -11,7 +11,10 @@ if ($sql->rowCount() > 0) {
     $photo = $photo['userimagem'];
 }
 
-
+if ($_SESSION['id'] === false) {
+    header('Location: ../views/login.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,8 +53,8 @@ if ($sql->rowCount() > 0) {
                         <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
                     </div>
                     <div class="buttons-area">
-                    <a class="button-aside btn btn-danger" href="../php/removerperfil.php" onclick="return confirm('Deseja remover a foto?')">Remover foto</a>
-                        </div>
+                        <a class="button-aside btn btn-danger" href="../php/removerperfil.php" onclick="return confirm('Deseja remover a foto?')">Remover foto</a>
+                    </div>
                     <div class=" dados-user">
                         <label> Nome: </label>
                         <p>
@@ -79,13 +82,16 @@ if ($sql->rowCount() > 0) {
                         </p>
                     </div>
                     <div class="buttons-area">
+                        <a href = "obs.php" class="button-obs btn btn-lg btn-primary">Adicionar reclamação ou observação sobre o sistema</a>
+                    </div>
+                    <div class="buttons-area">
                         <button onclick="window.location.href  = 'editar-user.php '" class="button-aside btn btn-lg btn-primary">Editar perfil</button>
                         <button class="button-aside btn btn-lg btn-warning" onclick="(()=>{
                         if(confirm('Deseja mesmo sair'))location.href='../php/logout.php';
                     })()">Sair</button>
                     </div>
                     <div class="delete-button">
-                    <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
+                        <a class="button-aside btn btn-danger" href="../php/deleteuser.php" onclick="return confirm('Tem certeza que deseja excluir seu próprio usuário?')">Excluir</a>
                     </div>
                 </div>
             </div>

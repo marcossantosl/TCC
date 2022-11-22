@@ -1,7 +1,6 @@
 
 .user-area {
     padding: 40px 40px 40px 40px;
-    width: 550px;
 }
 
 .menu-area {
@@ -14,7 +13,7 @@
     border-radius: 35px;
     border: 3px solid black;
     width: 550px;
-    height: 820px;
+    height: 100%px;
     overflow-x: hidden;
     overflow-y: auto;
     transition: all ease .5s;
@@ -65,7 +64,7 @@
 .buttons-area {
     justify-content: first baseline;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .button-aside {
@@ -108,5 +107,10 @@
 .imgcenter { 
     display: flex;
     justify-content: center;
+}
+
+.button-obs {
+    font-size: 13px!important;
+    text-transform: uppercase!important;
 }
 

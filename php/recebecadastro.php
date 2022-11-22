@@ -9,7 +9,7 @@ $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $senha = filter_input(INPUT_POST, 'password');
 $senha_criptografada = password_hash($senha, PASSWORD_DEFAULT);
 $rsenha = filter_input(INPUT_POST, 'rpassword');
-
+$deficiencia = filter_input(INPUT_POST, 'deficiencia');
 
 //SESSÕES 
 
@@ -41,10 +41,11 @@ if ($nome and $user and $email) {
 
 
     if ($sql->rowCount() == 0) {
-        $sql = $pdo->prepare("INSERT INTO usuario.usuario (nome, user, email, senha) VALUES (:nome, :user, :email, :senha)");
+        $sql = $pdo->prepare("INSERT INTO usuario.usuario (nome, user, email, senha, defvisual) VALUES (:nome, :user, :email, :senha, :deficiencia)");
         $sql->bindValue(':nome', $nome);
         $sql->bindValue(':email', $email);
         $sql->bindValue(':user', $user);
+        $sql->bindValue(':deficiencia', $deficiencia);
         $sql->bindValue(':senha', $senha_criptografada);
         $sql->execute();
 
