@@ -82,6 +82,28 @@
     }
 }
 
+@media (max-width: 750px) {
+
+    .containerAcesso {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .msg {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) {
+
+.button-acess {
+    display:none;
+}
+
+}
+
+
 /* USER AREA */
 
 @media (max-width: 490px) {
@@ -166,9 +188,9 @@
         margin-bottom: 20px!important;
     }
     .desc-local p {
-        font-size: 15px!important;
+        font-size: 25px!important;
     }
     .desc-local h3 {
-        font-size: 25px!important;
+        font-size: 35px!important;
     }
 }

@@ -65,10 +65,10 @@ if (!isset($_SESSION['id'])) {
   <!--HEADER-->
 
   <!--SLIDER-->
-  <div id="slider" class="block">
+  <div id="slider" class="block" style="margin-bottom: 100px;">
     <div class="container pt-5">
       <div class="row firstRowSlide">
-        <div class="col-lg-4 col-md-6 align-self-center mb-md-0 mb-4">
+        <div class="col-lg-6 col-md-6 align-self-center mb-md-0 mb-4">
           <h1 class="mb-3">O que é o IFC Guide?</h1>
           <h4>É um site informativo, cujo objetivo é atender a comunidade de alunos do Instituto Federal Catarinense -
             Campus Avançado Sombrio, assistindo os educandos na organização e orientação pelo Campus. Além do mais,
@@ -76,16 +76,16 @@ if (!isset($_SESSION['id'])) {
             visão.
           </h4>
         </div>
-        <div class="col-lg-8 col-md-6 align-self-center text-center">
-          <img src="../assets/images/destaque1.svg" class="img-fluid" />
+        <div class="col-lg-6 col-md-6 align-self-center text-center">
+          <img src="../assets/images/if1.jpeg" class="img-fluid" style="height: 450px; border-radius: 20px; " />
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-7 col-md-6 align-self-center text-center order-md-1 order-2">
-          <img src="../assets/images/destaque1.svg" class="img-fluid" />
+        <div class="col-lg-6 col-md-6 align-self-center text-center order-md-1 order-2">
+          <img src="../assets/images/if2.jpeg" style="height: 450px; border-radius: 20px; "  class="img-fluid" />
         </div>
-        <div class="col-lg-5 col-md-6 align-self-center mb-md-0 order-md-2 order-1">
+        <div class="col-lg-6 col-md-6 align-self-center mb-md-0 order-md-2 order-1" >
           <h1 class="mb-3">Quais funções vão estar disponíveis?</h1>
           <h4>Tem por finalidade fornecer horários atualizados dos cursos integrados, notificações sobre as aulas e
             atualizações, calendários acadêmicos, regras e normas do instituto, cronogramas personalizados para aqueles
@@ -105,18 +105,12 @@ if (!isset($_SESSION['id'])) {
       <div class="logo py-4">
         <div class="row">
           <div class="col-md-9 align-self-center text-md-left text-center">
-            <img src="../assets/images/logo.svg" class="img-fluid" />
+            <img alt="logo ifc-guide"src="../assets/images/logo.svg" class="img-fluid" />
           </div>
           <div class="col-md-3 align-self-center text-right">
             <ul>
               <li>
-                <a href="#"><img src="../assets/images/discord.svg" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="../assets/images/twitter.svg" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="../assets/images/instagram.svg" /></a>
+                <a alt="nossa página do instagram" href="#"><img src="../assets/images/instagram.svg" /></a>
               </li>
             </ul>
           </div>

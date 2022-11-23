@@ -36,7 +36,7 @@ if ($_SESSION['id'] === false) {
 <body>
 
     <div class="container">
-        <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+    <button class="back-button btn btn-dark" onclick="location.href='user.php';">Voltar</button>
         <div class="imgcenter">
             <div id="menu-area">
                 <div class="user-area">
@@ -50,12 +50,12 @@ if ($_SESSION['id'] === false) {
                         </p>
                     </div>
                     <div class="imgcenter">
-                        <img class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
+                        <img alt="foto de perfil" class="img-user w-50 p-3 rounded-circle" src="../assets/images/userimg/<?= isset($photo) ? $photo : 'user-img.png'; ?>">
                     </div>
                     <div class="buttons-area">
-                        <a class="button-aside btn btn-danger" href="../php/removerperfil.php" onclick="return confirm('Deseja remover a foto?')">Remover foto</a>
+                        <a alt="remover foto de perfil "class="button-aside btn btn-danger" href="../php/removerperfil.php" onclick="return confirm('Deseja remover a foto?')">Remover foto</a>
                     </div>
-                    <div class=" dados-user">
+                    <div class="dados-user">
                         <label> Nome: </label>
                         <p>
                             <?php
@@ -82,7 +82,7 @@ if ($_SESSION['id'] === false) {
                         </p>
                     </div>
                     <div class="buttons-area">
-                        <a href = "obs.php" class="button-obs btn btn-lg btn-primary">Adicionar reclamação ou observação sobre o sistema</a>
+                        <button onclick="location.href='obs.php';" class="button-obs btn btn-lg btn-primary">Adicionar reclamação ou observação sobre o sistema</a>
                     </div>
                     <div class="buttons-area">
                         <button onclick="window.location.href  = 'editar-user.php '" class="button-aside btn btn-lg btn-primary">Editar perfil</button>
@@ -98,14 +98,6 @@ if ($_SESSION['id'] === false) {
         </div>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/magnify/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@ if ($id) {
 
 <body>
     <div class="container">
-        <a class="back-button btn btn-dark" href="locais.php?id=<?= $local['idandar'] ?>">Voltar</a>
+        <button class="back-button btn btn-dark" onclick="location.href='locais.php?id=<?= $local['idandar'] ?>';">Voltar</button>
         <div class="geral-local">
             <div class="desc-local">
                 <div>

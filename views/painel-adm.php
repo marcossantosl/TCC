@@ -31,7 +31,7 @@ if ($_SESSION['id'] === false) {
 
 <body>
     <div class="container">
-        <a class="back-button btn btn-dark" href="gerenciarpaineis.php">Voltar</a>
+        <button class="back-button btn btn-dark" onclick="location.href='gerenciarpaineis.php';">Voltar</button>
         <table class="table table-responsive table-hover ">
             <thead>
                 <tr>
@@ -48,9 +48,13 @@ if ($_SESSION['id'] === false) {
                         <td><?php echo $info['id']; ?></td>
                         <td><?php echo $info['nome']; ?></td>
                         <td><?php echo $info['user']; ?></td>
-                        <td><?php echo $info['admuser']; ?></td>
+                        <td><?php if ($info['admuser'] == 1) {
+                                echo 'Sim';
+                            }else {
+                                echo 'Não';
+                            }; ?></td>
                         <td>
-                            <a class="btn btn-warning" href="../php/admin.php?id=<?= $info['id']; ?>">Alterar (1 para adm)</a>
+                            <button class="btn btn-warning" onclick="location.href='../php/admin.php?id=<?= $info['id']; ?>';">Alterar</a>
                             <!-- Botões para editar e excluir o registro na tabela -->
                         </td>
                     </tr>

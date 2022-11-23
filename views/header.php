@@ -20,11 +20,11 @@
             <div id="header">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="#">
-                            <img src="../assets/images/logo.svg" class="img-fluid" onclick="window.location.href='home.php'">
+                        <a  alt="página de início" class="navbar-brand" href="home.php">
+                            <img src="../assets/images/logo.svg" class="img-fluid">
                         </a>
 
-                        <button alt="menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button alt="menu expansível" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,7 +38,7 @@
 
                                 if ($info['admuser'] == 1) { ?>
                                     <li class="nav-item">
-                                        <a type="button" href="gerenciarpaineis.php" class="nav-button btn btn-outline-info btn-lg">PAINEL DE ADMINISTRAÇÃO</a>
+                                        <button  onclick="location.href='gerenciarpaineis.php';" class="nav-button btn btn-outline-info btn-lg">PAINEL DE ADMINISTRAÇÃO</button>
                                     </li>
                                 <?php }; ?>
                             </ul>

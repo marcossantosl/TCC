@@ -15,7 +15,7 @@ $deficiencia = filter_input(INPUT_POST, 'deficiencia');
 
 //CAMPOS VAZIOS
 if ($nome == "" and $user == "" and $email == "") {
-    $_SESSION['aviso!'] =  "Verifique seus campos";
+    $_SESSION['avisoC'] =  "Verifique seus campos";
     header("Location: ../views/cadastro.php");
     exit;
 };
@@ -25,7 +25,7 @@ if ($senha != $rsenha) {
     header("Location: ../views/cadastro.php");
     exit;
 } elseif (strlen($senha) < 8) {
-    $_SESSION['avisoComprimentoSenha!'] = "Sua senha deve conter no mínimo 8 caracteres";
+    $_SESSION['avisoComprimentoSenha!'] = "A senha deve conter no mínimo 8 caracteres";
     header("Location: ../views/cadastro.php");
     exit;
 };
@@ -58,7 +58,7 @@ if ($nome and $user and $email) {
         exit;
     }
 } else {
-    $_SESSION['aviso'] = "Verifique seus campos";
+    $_SESSION['avisoC'] = "Verifique seus campos";
     header("Location: ../views/cadastro.php");
     exit;
 };

@@ -8,7 +8,9 @@
     display: flex;
     justify-content: space-between;
 }
-
+.containerFormMaior input {
+    width:98%;
+}   
 .botoes {
     padding-right: 100px;
     width: 100%;

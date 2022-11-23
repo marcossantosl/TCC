@@ -21,7 +21,7 @@ if ($_SESSION['id'] === false) {
     <title>Marketing Website</title>
 </head>
 <div class="container">
-    <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+    <button class="back-button btn btn-dark" onclick="location.href='user.php';">Voltar</button>
     <div class="containerForm">
         <div class="editar-area">
             <p class="session-acesso">

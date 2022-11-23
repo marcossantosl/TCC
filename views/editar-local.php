@@ -45,7 +45,7 @@ if ($id) {
 </head>
 
 <div class="container">
-    <a class="back-button btn btn-dark" href="painel-locais.php">Voltar</a>
+    <button class="back-button btn btn-dark" onclick="location.href='painel-locais.php';">Voltar</button>
     <div class="containerFormMaior">
         <div class="editar-area-especial">
             <form method='POST' action='../php/editarlocal.php'>
@@ -70,27 +70,27 @@ if ($id) {
                 <div class="bloco-select areas">
                     <label> Região atual: <?= $info['bloco']; ?> </label>
                     <select class="select form-control select2 select2-hidden-accessible" name="bloco" selected="<?= $info['bloco']; ?>">
-                        <option value="1° bloco">1° bloco</option>
-                        <option value="2° bloco">2° bloco</option>
+                        <option value="Primeiro bloco">Primeiro bloco</option>
+                        <option value="Segundo bloco">Segundo bloco</option>
                         <option value="Vírgula">Virgula</option>
                         <option value="Ambiente externo">Ambiente externo</option>
                     </select>
                 </div>
                 <label>Descrição física do ambiente (detalhada com orientações em metros)</label>
                 <div class="form-floating w-100 areas">
-                    <textarea class="form-control" cols=40 rows="8" name="descricao" maxlength="1000" ><?= $info['descricaofisica']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="8" name="descricao" maxlength="3000" ><?= $info['descricaofisica']; ?></textarea>
                 </div>
                 <label>Melhor forma de chegar ao local de forma detalhada, utilizando meio de orientação em metros e pontos de referências conhecidos no campus</label>
                 <div class="form-floating w-100 areas">
-                    <textarea class="form-control" cols=40 rows="8" name="rota" maxlength="1000" wrap="hard" ><?= $info['rota']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="8" name="rota" maxlength="1500" wrap="hard" ><?= $info['rota']; ?></textarea>
                 </div>
-                <label>professores e funcionários que atuam no local</label>
+                <label>Professores e funcionários que atuam no local</label>
                 <div class="form-floating w-100 areas">
-                    <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="1000" wrap="hard"><?= $info['funcionarios']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="3" name="funcionarios" maxlength="200" wrap="hard"><?= $info['funcionarios']; ?></textarea>
                 </div>
                 <label>Alunos que frequentam o local</label>
                 <div class="form-floating w-100 areas">
-                    <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="1000" wrap="hard"><?= $info['alunos']; ?></textarea>
+                    <textarea class="form-control" cols=40 rows="3" name="alunos" maxlength="200" wrap="hard"><?= $info['alunos']; ?></textarea>
                 </div>
                 <br />
                 <div class="buttons-area">

@@ -44,9 +44,9 @@ if ($id) {
 <body>
     <div class="container">
         <div class="geral-locais ">
-            <a class="back-button btn btn-dark" href="andares.php">Voltar</a>
+            <a class="back-button btn btn-dark" onclick="location.href='andares.php';">Voltar</a>
             <div class="search-area">
-                <form method="POST" action="../php/filtersearch.php" class="form-inline my-2 my-lg-0">
+                <form method="POST" action="#" class="form-inline my-2 my-lg-0">
                     <input alt="campo pra inserir pesquisa de local"class="form-control mr-sm-2" name="pesquisar" type="search" placeholder="PESQUISAR" aria-label="Search">
                     <button alt="botão pesquisar local"class="btn btn-outline-success my-2 my-sm-0" type="submit">ENVIAR</button>
                 </form>
@@ -56,23 +56,9 @@ if ($id) {
         <div class="locais-area">
             <div>
                 <?php
-
-                if ($resultados) {
-                    
-                    foreach ($resultados as $result) : ?>
-                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $result['id']; ?>"><?= $result['nome'] ?></a>
-                    <?php endforeach;
-                } else {
                     foreach ($local as $lugar) : ?>
-                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="local.php?id=<?= $lugar['id']; ?>"><?= $lugar['nome'] ?></a>
-                <?php endforeach;;
-                }
-                var_dump($resultados);
-
-                if (isset($_SESSION['search'])) {
-                    $_SESSION['search'] = "";
-                }
-unset($resultados);
+                        <button class="local-button-locais btn btn-outline-dark btn-lg btn-block" onclick="location.href='local.php?id=<?= $lugar['id']; ?>';"><?= $lugar['nome'] ?></button>
+                <?php endforeach;
                 ?>
             </div>
         </div>

@@ -24,7 +24,7 @@ if ($_SESSION['id'] === false) {
 </head>
 
 <div class="container">
-    <a class="back-button btn btn-dark" href="user.php">Voltar</a>
+    <button class="back-button btn btn-dark" onclick="location.href='user.php';">Voltar</button>
     <div class="containerFormMaior">
         <div class="editar-area-especial">
             <form method='POST' action='../php/recebeobs.php'>

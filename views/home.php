@@ -29,8 +29,8 @@
         <div id="header">
             <div class="container">
                 <nav class="navbar navbar-expand-sm navbar-light ">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/images/logo.svg" class="img-fluid" onclick="window.location.href='home.php'">
+                    <a href="home.php" alt="página de início" class="navbar-brand" >
+                        <img src="../assets/images/logo.svg" class="img-fluid">
                     </a>
 
                     <button alt="menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +41,11 @@
                             <!-- verificação de adm -->
                             <?php if ($info['admuser'] == 1) { ?>
                                 <li class="nav-item">
-                                    <a type="button" href="gerenciarpaineis.php" class="nav-button btn btn-outline-info btn-lg">PAINEL DE ADMINISTRAÇÃO</a>
+                                    <button onclick="location.href='gerenciarpaineis.php';" class="nav-button btn btn-outline-info btn-lg">PAINEL DE ADMINISTRAÇÃO</button>
                                 </li>
                             <?php }; ?>
                             <li class="nav-item">
-                                <a type="button" href="user.php" class="nav-button btn btn-outline-info btn-lg">Usuário</a>
+                                <button  onclick="location.href='user.php';" class="nav-button btn btn-outline-info btn-lg">Usuário</button>
                             </li>
                         </ul>
                     </div>
@@ -66,22 +66,13 @@
                             ?> </p>
         <main class="principal-area">
             <div class="locais">
-                <img class="locaisImg" onclick="window.location.href = 'andares.php'" src="../assets/images/locais.svg">
+                <img alt="Áreas de locais"class="locaisImg" onclick="window.location.href = 'andares.php'" src="../assets/images/locais.svg">
                 <a> Locais </a>
             </div>
         </main>
     </div>
     <!-- //FUNÇOES -->
 
-    <!--JS-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/magnify/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -34,23 +34,13 @@
         <div class="locais-area">
             <div>
 
-                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="painel-users.php">gerênciar usuários</a>
-                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="painel-adm.php">gerenciar administradores</a>
-                        <a class="local-button-locais btn btn-outline-dark btn-lg btn-block" href="painel-locais.php">gerênciar locais</a>
+                        <button class="local-button-locais btn btn-outline-dark btn-lg btn-block" onclick="location.href='painel-users.php';">gerênciar usuários</button>
+                        <button class="local-button-locais btn btn-outline-dark btn-lg btn-block" onclick="location.href='painel-adm.php';">gerenciar administradores</button>
+                        <button class="local-button-locais btn btn-outline-dark btn-lg btn-block" onclick="location.href='painel-locais.php';">gerênciar locais</button>
             </div>
         </div>
     </div>
     <!-- //FUNÇOES -->
-
-    <!--JS-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/magnify/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/9884a810af.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

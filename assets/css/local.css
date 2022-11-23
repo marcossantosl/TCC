@@ -5,7 +5,7 @@
 
 .desc-local { 
     padding: 15px;
-    width: 60%;
+    width: 80%;
     text-align: center;
     border: 3px solid black;
     border-radius: 40px;
@@ -17,14 +17,14 @@
 .desc-local h1 {
     text-decoration: underline;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 80px;
     margin-bottom: 25px;
     
 }
 
 .desc-local p {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 25px;
     padding: 0px 35px 0px 35px;
 }
@@ -42,6 +42,6 @@
 .desc-local h3 {
     text-decoration: underline;
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
 }

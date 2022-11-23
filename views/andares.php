@@ -26,12 +26,12 @@ if ($_SESSION['id'] === false) {
 <body>
     <div class="container">
         <div class="geral">
-            <a class="back-button btn btn-dark" href="home.php">Voltar</a>
+            <button class="back-button btn btn-dark"  onclick="location.href='home.php';">Voltar</button>
             <div class="areas">
                 <div class="botoes">
                     <?php foreach ($andares as $andar) : ?>
                         <div class="d-grid">
-                            <a class="local-button btn btn-outline-dark btn-block" href="locais.php?id=<?= $andar['id']; ?>"><?= $andar['andar'] ?></a>
+                            <button class="local-button btn btn-outline-dark btn-block" onclick="location.href='locais.php?id=<?= $andar['id']; ?>';"><?= $andar['andar'] ?></button>
                         </div>
                     <?php endforeach; ?>
                 </div>

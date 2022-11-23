@@ -31,10 +31,22 @@ if ($_SESSION['id'] === false) {
 
 <body>
     <div class="container">
+        <p class="session-acesso">
+            <?php
 
+            if (isset($_SESSION['cadastroLSucesso'])) {
+                echo $_SESSION['cadastroLSucesso'];
+                $_SESSION['cadastroLSucesso'] = '';
+            }
+            if (isset($_SESSION['updatelocal'])) {
+                echo $_SESSION['updatelocal'];
+                $_SESSION['updatelocal'] = '';
+            }
+            ?>
+        </p>
         <div class="buttons-ares">
-            <a class="back-button btn btn-dark" href="gerenciarpaineis.php">Voltar</a>
-            <a class="back-button btn btn-success" href="cadastro-local.php">Cadastrar local</a>
+            <button class="back-button btn btn-dark" onclick="location.href='gerenciarpaineis.php';">Voltar</button>
+            <button class="back-button btn btn-success" onclick="location.href='cadastro-local.php';">Cadastrar local</button>
         </div>
         <table class="table table-responsive table-hover ">
             <thead>
@@ -64,9 +76,9 @@ if ($_SESSION['id'] === false) {
                             <td><?php echo $item['funcionarios']; ?></td>
                             <td><?php echo $item['alunos']; ?></td>
                             <td>
-                                <a class="table-button btn btn-primary" href="editar-local.php?id=<?= $item['id']; ?>">Editar</a>
-                                <a class="table-button btn btn-danger" href="../php/admin-deletelocal.php?id=<?= $item['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-                                <!-- Botões para editar e excluir o registro na tabela -->
+                                <button class="table-button btn btn-primary" onclick="location.href='editar-local.php?id=<?= $item['id']; ?>';">Editar</button>
+                                <a class="table-button btn btn-danger" href="../php/admin-deletelocal.php?id=<?= $item['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
+                                    <!-- Botões para editar e excluir o registro na tabela -->
                             </td>
                         </tr>
             </tbody>

@@ -13,7 +13,7 @@ $alunos = filter_input(INPUT_POST, 'alunos', FILTER_DEFAULT);
 $rota = filter_input(INPUT_POST, 'rota', FILTER_DEFAULT);
 
 if (!$nome and !$funcao and !$andar and !$bloco and !$descricao and !$funcionarios and !$alunos and !$rota) {
-    $_SESSION['aviso'] =  "<b><font color='red'> Verifique seus campos </font></b>";
+    $_SESSION['avisoLocal'] =  "Verifique seus campos";
     header("Location: ../views/cadastro-local.php");
     exit;
 };
@@ -39,16 +39,16 @@ if ($nome) {
         $sql->bindValue(':bloco', $bloco);
         $sql->execute();
 
-        $_SESSION['cadastroSucesso'] =  "<b><font color='red'> Cadastro dos local efetuado com sucesso </font></b>";
+        $_SESSION['cadastroLSucesso'] =  "Cadastro dos local efetuado com sucesso";
         header('Location: ../views/painel-locais.php');
         exit;
     } else {
-        $_SESSION['avisoUser'] =  "<b><font color='red'> Email ou/e usuário já cadastrados </font></b>";
+        $_SESSION['avisoL'] =  "Local já cadastrado";
         header("Location: ../views/cadastro-local.php");
         exit;
     }
 } else {
-    $_SESSION['aviso'];
+    $_SESSION['avisoLocal'] = "Verifique seus campos";
     header("Location: ../views/cadastro-local.php");
     exit;
 };
